@@ -29,7 +29,7 @@ const overlay = ref(null);
         <section v-if="isOpen || isDesktop" class="h-full"
             :class="isOpen ? 'fixed inset-0 z-150 flex bg-black/50 sm:static sm:bg-transparent w-78' : 'hidden sm:block'">
             <aside
-                class="flex items-start justify-start h-full w-78 light:text-gray-900 light:bg-white 2xl:rounded-2xl rounded-none bg-black z-50 border light:border-black/10 border-white/15">
+                class="flex items-start justify-start h-full w-78 light:text-gray-900 light:bg-white 2xl:rounded-2xl rounded-none bg-black z-50 2xl:border border-r light:border-black/10 border-white/10">
                 <nav
                     class="mx-auto max-w-7xl w-full h-full light:text-black/60 light:bg-transparent text-white/80 flex flex-col items-start justify-between sm:p-3 md:p-6 p-4">
                     <div class="flex flex-col items-start justify-start w-full">
@@ -73,7 +73,7 @@ const overlay = ref(null);
                                     <Info size="20" />
                                     <p>About</p>
                                 </router-link>
-                                <router-link to="/about" @click="emit('close')"
+                                <router-link to="/Service" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-gray-950 light:bg-gray-100">
                                     <Layers size="20" />

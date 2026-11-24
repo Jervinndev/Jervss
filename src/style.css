@@ -62,3 +62,8 @@ html.light {
   background-position: 0 0, 8px 8px;
   background-size: 16px 16px;
 }
+
+html:not(.light) .dot {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.509) 15%, transparent 15%),
+    radial-gradient(rgba(255, 255, 255, 0.509) 15%, transparent 15%);
+}

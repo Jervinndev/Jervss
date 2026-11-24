@@ -77,27 +77,28 @@ async function handleSubmit() {
 
 
 <template>
-    <section id="contact" class=" text-white px-6 md:px-10 py-10">
+    <section id="contact" class=" text-white px-2 md:px-10 py-10 mt-5">
         <div class=" max-w-7xl mx-auto">
             <!-- Eyebrow + Heading -->
-            <p class="text-white/30 light:text-black/30 tracking-[0.3em] text-xs font-semibold mb-2">
+            <p class="text-white/30 font-mono light:text-black/30 tracking-[0.3em] text-xs font-semibold mb-2">
                 LET'S TALK
             </p>
-            <h2 class="text-3xl light:text-black md:text-5xl font-black tracking-tight mb-2">
+            <h2 class="text-3xl font-mono light:text-black md:text-5xl font-black tracking-tight mb-2">
                 CONTACT
             </h2>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 gap-4">
 
                 <!-- LEFT: Info -->
-                <div class="flex flex-col justify-between gap-8">
+                <div class="flex flex-col justify-between gap-4">
                     <div>
-                        <p class="text-white/50 light:text-black/60 leading-relaxed max-w-md">
+                        <p
+                            class="text-white/50 light:text-black/60 leading-relaxed max-w-md font-Poppins 2xl:text-[16px] text-sm">
                             Got a project in mind, a question, or just want to say hi?
                             My inbox is always open. I'll get back to you as soon as I can.
                         </p>
                     </div>
-
+                    <!-- 
                     <div class="flex flex-col gap-4">
                         <a v-for="item in contactInfo" :key="item.label" :href="item.href"
                             class="flex items-center gap-4 bg-[#0d0d0d] light:bg-white border border-white/10 light:border-black/10 rounded-xl px-5 py-4 hover:border-white/30 transition-colors">
@@ -111,7 +112,7 @@ async function handleSubmit() {
                                     }}</span>
                             </span>
                         </a>
-                    </div>
+                    </div> -->
 
                     <!-- Availability -->
                     <div
@@ -127,7 +128,7 @@ async function handleSubmit() {
                 </div>
 
                 <!-- RIGHT: Form -->
-                <div class="bg-[#0d0d0d] light:bg-white border border-white/10 light:border-black/10 rounded-xl p-8">
+                <div class="bg-[#0d0d0d] light:bg-white border border-white/10 light:border-black/10 rounded-xl p-6">
                     <h3 class="text-lg font-bold mb-6  light:text-black/70">Send a message</h3>
 
                     <form @submit.prevent="handleSubmit" class="flex flex-col gap-5">

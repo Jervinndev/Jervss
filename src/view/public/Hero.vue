@@ -200,10 +200,10 @@ onMounted(() => {
                 <!-- Right: stat cards -->
                 <div class="grid grid-cols-2">
                     <div v-for="stat in stats" :key="stat.label"
-                        class="bg-[#0d0d0d] light:bg-white light:border-black/10 p-6 border-l border-b border-white/10">
+                        class="bg-black/90 light:bg-white light:border-black/10 p-6 border-l border-b border-white/10">
                         <p class="text-3xl font-black font-mono text-gray-200 light:text-black">{{ stat.value }}
                         </p>
-                        <p class="text-white/30 font-normal font-Poppins light:text-black/40 text-sm mt-1 ">{{
+                        <p class="text-white/60 font-normal font-Poppins light:text-black/40 text-sm mt-1 ">{{
                             stat.label }}</p>
                     </div>
                 </div>
@@ -230,7 +230,7 @@ onMounted(() => {
                 class="mx-auto max-w-5xl w-full grid 2xl:grid-cols-3 md:grid-cols-3 grid-cols-1 pt-2 2xl:gap-4 gap-3.5">
                 <div ref="proj" v-for="pro in project" :key="pro.id">
                     <div
-                        class="p-6 grid grid-cols-1 gap-2.5 text-slate-100 light:text-gray-800 bg-[#0d0d0d] border border-white/10 light:bg-white light:border-black/10 transition-colors duration-500 rounded-2xl h-full shadow-2xl shadow-black/20 light:shadow-gray-300 hover:shadow-black/40 hover:light:shadow-gray-400 hover:-translate-y-2 transition-all duration-500">
+                        class="p-6 grid grid-cols-1 gap-2.5 text-slate-100 light:text-gray-800 bg-black/90 border border-white/10 light:bg-white light:border-black/10 transition-colors duration-500 rounded-2xl h-full shadow-2xl shadow-black/60 light:shadow-gray-300/30 hover:-translate-y-2 transition-all duration-500">
                         <div class="flex items-start justify-start gap-4">
                             <img :src="pro.img" alt="" class="h-15 w-15 object-cover rounded-xl">
                             <div>
@@ -238,8 +238,8 @@ onMounted(() => {
                                 <h1 class="text-xs font-Poppins text-white/30 light:text-black/50">{{ pro.title }}</h1>
                             </div>
                         </div>
-                        <p class="text-sm font-space-mono leading-7 text-white/50 light:text-black/60 mt-5">{{ pro.par
-                            }}</p>
+                        <p class="text-sm font-space-mono leading-7 text-white/60 light:text-black/60 mt-5">{{ pro.par
+                        }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div
@@ -257,7 +257,7 @@ onMounted(() => {
     </section>
 
     <section>
-        <div class="w-full flex items-center justify-center flex-col mt-4">
+        <div class="w-full flex items-center justify-center flex-col mt-10">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
                 <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">03 What i Do?</h1>
@@ -273,43 +273,49 @@ onMounted(() => {
             </div>
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex flex-col items-center justify-between transition-colors duration-500">
-                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
-                    <h1 class="font-mono">01</h1>
+                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium">Wed Design</h1>
-                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
+                        <p class="font-mono text-white/60 light:text-black/60 2xl:text-[16px] text-sm">Lorem ipsum dolor
+                            sit amet consectetur
+                            adipisicing elit.
                             Fugit, eos!</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
-                    <h1 class="font-mono">02</h1>
+                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium">Wed Design</h1>
-                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
+                        <p class="font-mono text-white/60 light:text-black/60">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
                             Fugit, eos!</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
-                    <h1 class="font-mono">03</h1>
+                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium">Wed Design</h1>
-                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
+                        <p class="font-mono text-white/60 light:text-black/60">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
                             Fugit, eos!</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
-                    <h1 class="font-mono">04</h1>
+                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium">Wed Design</h1>
-                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
+                        <p class="font-mono text-white/60 light:text-black/60">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
                             Fugit, eos!</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
-                    <h1 class="font-mono">05</h1>
+                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium">Wed Design</h1>
-                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
+                        <p class="font-mono text-white/60 light:text-black/60">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
                             Fugit, eos!</p>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ const toggleSidebar = () => {
 
 <template>
     <Header @toggle-sidebar="toggleSidebar" />
-    <section class="flex w-full h-screen light:bg-white/90 bg-black">
+    <section class="flex w-full h-screen light:bg-white/90 bg-black/95">
         <div class="2xl:p-4 p-0 2xl:pr-0">
             <Sidebar :isOpen="isSidebarOpen" @close="isSidebarOpen = false" />
         </div>
