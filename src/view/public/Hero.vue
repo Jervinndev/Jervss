@@ -104,24 +104,24 @@ onMounted(() => {
 <template>
     <section class="flex items-center justify-center 2xl:pt-20 pt-10">
         <div
-            class="mx-auto max-w-5xl w-full h-auto overflow-hidden 2xl:p-4 sm:p-6 p-0 gap-10 2xl:flex flex-row item-center justify-center">
-            <div ref="imges" class="items-center justify-center gap-10">
+            class="mx-auto max-w-5xl w-full h-auto overflow-hidden 2xl:p-4 sm:p-6 p-2 gap-10 2xl:flex flex-row item-center justify-center">
+            <div ref="imges" class="items-center justify-center gap-10 2xl:mt-0 mt-5">
                 <Transition mode="out-in" enter-active-class="transition-opacity duration-300"
                     leave-active-class="transition-opacity duration-300" enter-from-class="opacity-0"
                     leave-to-class="opacity-0">
                     <img :key="currentImg" :src="currentImg" :alt="active"
-                        class="w-180 2xl:h-94 md:h-70 block 2xl:object-cover object-contain hover:grayscale-0 transition-all duration-500" />
+                        class="w-180 2xl:h-94 md:h-70 h-72 block 2xl:object-cover object-contain hover:grayscale-0 transition-all duration-500" />
                 </Transition>
             </div>
             <div class="flex flex-col gap-3.5 2xl:mt-0 mt-5">
 
                 <h1 ref="headlineRef"
-                    class="font-black 2xl:text-5xl text-3xl  font-space-mono light:text-gray-900 text-gray-200">
+                    class="font-black 2xl:text-5xl text-3xl font-space-mono light:text-gray-900 text-gray-200">
                     Jervin Villones
 
                 </h1>
                 <p ref="paragraphRef"
-                    class="font-Poppins font-normal tracking-wide w-xl 2xl:text-lg text-md leading-7 light:text-black/60 text-white/90">
+                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/90">
                     I'm a <span class="font-bold">Front-end Developer</span> crafting seamless,
                     modern,
                     and animated
@@ -130,7 +130,7 @@ onMounted(() => {
 
                 </p>
                 <p ref="parasec"
-                    class="font-Poppins font-normal tracking-wide w-xl 2xl:text-lg text-md leading-7 light:text-black/60 text-white/90">
+                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/90">
                     I turn <span class="p-2 light:bg-gray-200 bg-white/20 rounded-xs">business problems</span> into
                     clean, fast, and
                     easy-to-use
@@ -141,20 +141,20 @@ onMounted(() => {
 
                 </p>
                 <p ref="parathir"
-                    class="font-Poppins font-normal tracking-wide 2xl:text-lg text-md leading-7 light:text-black/60 text-white/90">
+                    class="font-Poppins font-normal tracking-wide 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/90">
                     Always learning, always building. <span class="font-bold">Let's collaborate!</span>
 
                 </p>
                 <div ref="buttonsRef" class="grid grid-cols-2 items-center justify-center gap-2 2xl:w-fit w-full">
                     <button
-                        class="font-Poppins p-4 2xl:w-fit md:w-fit w-full bg-slate-50 light:bg-black light:text-white rounded-lg text-black text-sm font-medium tracking-widest flex items-center justify-center gap-4">
+                        class="font-Poppins 2xl:p-4 p-3 2xl:w-fit md:w-fit w-full bg-slate-50 light:bg-black light:text-white rounded-lg text-black text-sm font-medium tracking-widest flex items-center justify-center gap-4">
                         <a href="MarkJervinVilloneResume (2).pdf" download="MarkJervinVilloneResume (2).pdf"
                             target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">Download CV
 
                         </a>
                     </button>
                     <button
-                        class="p-4 2xl:w-fit md:w-fit w-full light:bg-white light:text-black bg-[#171717] rounded-lg text-white text-sm font-medium border border-gray-200/10 light:border-gray-200/90 tracking-widest flex items-center justify-center gap-4"><span>Connect
+                        class="2xl:p-4 p-3 2xl:w-fit md:w-fit w-full light:bg-white light:text-black bg-[#171717] rounded-lg text-white text-sm font-medium border border-gray-200/10 light:border-gray-200/90 tracking-widest flex items-center justify-center gap-4"><span>Connect
                             Now
                         </span>
                     </button>
@@ -239,7 +239,7 @@ onMounted(() => {
                             </div>
                         </div>
                         <p class="text-sm font-space-mono leading-7 text-white/50 light:text-black/60 mt-5">{{ pro.par
-                        }}</p>
+                            }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div

@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useMediaQuery } from '@vueuse/core';
-import { House, Info, FolderKanban, PhoneLog, Icon } from '@lucide/vue';
+import { House, Info, FolderKanban, PhoneLog, Icon, SquareKanbanPlus } from '@lucide/vue';
 import { useTheme } from '../composable/theme.js';
 import { Moon, Sun, Laptop2, Volume1, VolumeX } from '@lucide/vue';
 import { useSound } from '../composable/sound.js';
@@ -60,7 +60,7 @@ const overlay = ref(null);
 
                         <div class="flex flex-col items-center justify-center gap-4 w-full">
                             <ul
-                                class="flex flex-col gap-2 font-extrabold font-space-mono 2xl:mt-8 mt-6 w-full text-white/60 light:text-black/60">
+                                class="flex flex-col 2xl:text-[16px] text-sm gap-2 font-midium font-space-mono 2xl:mt-8 mt-6 w-full text-white/60 light:text-black/60">
                                 <router-link to="/hero" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-gray-950 light:bg-gray-100">
@@ -82,7 +82,7 @@ const overlay = ref(null);
                                 <router-link to="/collaboration" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-gray-950 light:bg-gray-100">
-                                    <PhoneLog size="20" />
+                                    <SquareKanbanPlus size="20" />
                                     <p>Collaboration</p>
                                 </router-link>
                                 <hr class="border-gray-200/10 light:border-gray-200/90">
@@ -91,7 +91,7 @@ const overlay = ref(null);
                     </div>
                     <div>
                         <hr class="border-gray-200/10 light:border-gray-200/90 mb-5">
-                        <p class="light:text-black/60 text-white/60 font-light font-space-mono">
+                        <p class="light:text-black/60 text-white/60 font-light 2xl:text-[16px] text-sm font-space-mono">
                             "Building practical, user-friendly applications made for real people and everyday use."
                         </p>
                         <div class="relative flex items-center justify-start gap-2 mt-4">
