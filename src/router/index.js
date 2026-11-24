@@ -10,6 +10,7 @@ import Hero from '../view/public/Hero.vue';
 import Education from '../view/public/Education.vue';
 import Skills from '../view/public/techskills.vue';
 import What from '../view/public/whatido.vue';
+import Community from '../view/public/Community.vue'
 
 
 const routes = [
@@ -59,6 +60,11 @@ const routes = [
                 name: "collaboration",
                 component: Collaboration,
             },
+            {
+                path: "/community",
+                name: "community",
+                component: Community,
+            }
         ]
     }
 ];

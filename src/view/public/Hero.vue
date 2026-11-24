@@ -34,7 +34,7 @@ const project = ref([
     },
     {
         id: 2,
-        title: "Web App",
+        title: " Static Web App",
         img: img2,
         sub: "Sarah Keyk",
         par: "A digital marketing showcase designed to boost brand visibility and engagement through a visually appealing online.",
@@ -45,7 +45,7 @@ const project = ref([
     },
     {
         id: 3,
-        title: "Web App",
+        title: "Static Web App",
         img: img3,
         sub: "Halamanerong Islander",
         par: "An immersive digital platform designed to highlight artisanal plant collections, optimized for brand growth.",
@@ -131,7 +131,7 @@ onMounted(() => {
                 </p>
                 <p ref="parasec"
                     class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/90">
-                    I turn <span class="p-2 light:bg-gray-200 bg-white/20 rounded-xs">business problems</span> into
+                    I turn <span class="p-2 light:bg-gray-200 bg-white/20 rounded-md">business problems</span> into
                     clean, fast, and
                     easy-to-use
                     websites. I
@@ -174,7 +174,7 @@ onMounted(() => {
 
     <section id="about" class="bg-black light:bg-white text-white px-2 md:px-6 py-10">
         <div class="max-w-5xl mx-auto w-full">
-            <p class=" text-sm text-white/30 font-mono font-bold light:text-slate-950/40 mb-3">GET TO KNOW ME</p>
+            <p class=" text-sm text-white/30 font-mono font-bold light:text-slate-950/40 mb-3">01 GET TO KNOW ME</p>
             <div class="grid gap-14 items-start">
                 <!-- <div>
                     <h2
@@ -211,11 +211,11 @@ onMounted(() => {
         </div>
     </section>
 
-    <section class="flex items-center justify-center w-full transition-colors duration-500 mt-10 px-2 md:px-6">
+    <section class="flex items-center justify-center w-full transition-colors duration-500 px-2 md:px-6">
         <div class="w-full flex items-center justify-center flex-col mt-4">
             <div
-                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">PROJECT</h1>
+                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 flex items-center justify-between transition-colors duration-500">
+                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">02 PROJECT</h1>
                 <router-link to="/Projectmore"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
@@ -226,7 +226,6 @@ onMounted(() => {
                     </svg>
                 </router-link>
             </div>
-
             <div
                 class="mx-auto max-w-5xl w-full grid 2xl:grid-cols-3 md:grid-cols-3 grid-cols-1 pt-2 2xl:gap-4 gap-3.5">
                 <div ref="proj" v-for="pro in project" :key="pro.id">
@@ -240,7 +239,7 @@ onMounted(() => {
                             </div>
                         </div>
                         <p class="text-sm font-space-mono leading-7 text-white/50 light:text-black/60 mt-5">{{ pro.par
-                        }}</p>
+                            }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div
@@ -251,6 +250,67 @@ onMounted(() => {
                             </a>
                             <p class="text-xs font-space-mono text-white/30 light:text-slate-950/40">{{ pro.year }} </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="w-full flex items-center justify-center flex-col mt-4">
+            <div
+                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
+                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">03 What i Do?</h1>
+                <router-link to="/Projectmore"
+                    class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
+                    VIEW ALL
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                </router-link>
+            </div>
+            <div
+                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex flex-col items-center justify-between transition-colors duration-500">
+                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
+                    <h1 class="font-mono">01</h1>
+                    <div>
+                        <h1 class="font-medium">Wed Design</h1>
+                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Fugit, eos!</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
+                    <h1 class="font-mono">02</h1>
+                    <div>
+                        <h1 class="font-medium">Wed Design</h1>
+                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Fugit, eos!</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
+                    <h1 class="font-mono">03</h1>
+                    <div>
+                        <h1 class="font-medium">Wed Design</h1>
+                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Fugit, eos!</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
+                    <h1 class="font-mono">04</h1>
+                    <div>
+                        <h1 class="font-medium">Wed Design</h1>
+                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Fugit, eos!</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 border-b border-gray-300 p-4 w-full">
+                    <h1 class="font-mono">05</h1>
+                    <div>
+                        <h1 class="font-medium">Wed Design</h1>
+                        <p class="font-mono text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Fugit, eos!</p>
                     </div>
                 </div>
             </div>

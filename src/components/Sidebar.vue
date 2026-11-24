@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useMediaQuery } from '@vueuse/core';
-import { House, Info, FolderKanban, PhoneLog, Icon, SquareKanbanPlus } from '@lucide/vue';
+import { House, Info, FolderKanban, PhoneLog, Icon, SquareKanbanPlus, Layers, Bot } from '@lucide/vue';
 import { useTheme } from '../composable/theme.js';
 import { Moon, Sun, Laptop2, Volume1, VolumeX } from '@lucide/vue';
 import { useSound } from '../composable/sound.js';
@@ -73,6 +73,12 @@ const overlay = ref(null);
                                     <Info size="20" />
                                     <p>About</p>
                                 </router-link>
+                                <router-link to="/about" @click="emit('close')"
+                                    class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
+                                    active-class="bg-gray-950 light:bg-gray-100">
+                                    <Layers size="20" />
+                                    <p>Services</p>
+                                </router-link>
                                 <router-link to="/projects" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-gray-950 light:bg-gray-100">
@@ -91,6 +97,12 @@ const overlay = ref(null);
                     </div>
                     <div>
                         <hr class="border-gray-200/10 light:border-gray-200/90 mb-5">
+                        <router-link to="/community" @click="emit('close')"
+                            class="flex items-center gap-3 p-2 mb-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
+                            active-class="bg-gray-950 light:bg-gray-100">
+                            <Bot size="20" />
+                            <p class="font-bold">Chat with boss jervs</p>
+                        </router-link>
                         <p class="light:text-black/60 text-white/60 font-light 2xl:text-[16px] text-sm font-space-mono">
                             "Building practical, user-friendly applications made for real people and everyday use."
                         </p>
