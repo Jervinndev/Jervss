@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Mainlayout from "../components/layouts/Mainlayout.vue";
+import Paganotfound from "../view/Error/Paganotfound.vue";
 
 // pages
 import About from '../view/public/about.vue';
@@ -12,6 +13,11 @@ import What from '../view/public/whatido.vue';
 
 
 const routes = [
+    {
+        path: "/:pathMatch(.*)*",
+        name: "Paganotfound",
+        component: Paganotfound,
+    },
     {
         path: "/",
         name: "main",
@@ -54,8 +60,7 @@ const routes = [
                 component: Collaboration,
             },
         ]
-    },
-
+    }
 ];
 
 const router = createRouter({
