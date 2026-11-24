@@ -81,7 +81,7 @@ const currentImg = computed(() => tabs.find(t => t.key === active.value).img)
                     Always learning, always building. <span class="font-bold">Let's collaborate!</span>
 
                 </p>
-                <div ref="buttonsRef" class="grid grid-cols-2 items-center justify-center gap-4 2xl:w-fit w-full">
+                <div ref="buttonsRef" class="grid grid-cols-2 items-center justify-center gap-2 2xl:w-fit w-full">
                     <button
                         class="font-Poppins p-4 2xl:w-fit md:w-fit w-full bg-slate-50 light:bg-black light:text-white rounded-lg text-black text-sm font-medium tracking-widest flex items-center justify-center gap-4">
                         <a href="/MarkJervinVilloneResume (2).pdf" download="MarkJervinVilloneResume (2).pdf"
