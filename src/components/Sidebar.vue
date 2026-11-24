@@ -26,7 +26,7 @@ const overlay = ref(null);
     <Transition enter-active-class="transition-transform duration-300 ease-out"
         leave-active-class="transition-transform duration-300 ease-in" enter-from-class="-translate-x-full"
         enter-to-class="translate-x-0" leave-from-class="translate-x-0" leave-to-class="-translate-x-full">
-        <section v-if="isOpen || isDesktop" class="dot h-full"
+        <section v-if="isOpen || isDesktop" class="h-full"
             :class="isOpen ? 'fixed inset-0 z-150 flex bg-black/50 sm:static sm:bg-transparent w-78' : 'hidden sm:block'">
             <aside
                 class="flex items-start justify-start h-full w-78 light:text-gray-900 light:bg-white 2xl:rounded-2xl rounded-none bg-black z-50 border light:border-black/10 border-white/15">

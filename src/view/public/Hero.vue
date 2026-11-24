@@ -171,7 +171,8 @@ onMounted(() => {
             </div>
         </div>
     </section>
-    <section id="about" class="bg-black light:bg-white text-white px-0 md:px-6 py-10">
+
+    <section id="about" class="bg-black light:bg-white text-white px-2 md:px-6 py-10">
         <div class="max-w-5xl mx-auto w-full">
             <p class=" text-sm text-white/30 font-mono font-bold light:text-slate-950/40 mb-3">GET TO KNOW ME</p>
             <div class="grid gap-14 items-start">
@@ -210,7 +211,7 @@ onMounted(() => {
         </div>
     </section>
 
-    <section class="flex items-center justify-center w-full transition-colors duration-500 mt-10">
+    <section class="flex items-center justify-center w-full transition-colors duration-500 mt-10 px-2 md:px-6">
         <div class="w-full flex items-center justify-center flex-col mt-4">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
@@ -239,7 +240,7 @@ onMounted(() => {
                             </div>
                         </div>
                         <p class="text-sm font-space-mono leading-7 text-white/50 light:text-black/60 mt-5">{{ pro.par
-                            }}</p>
+                        }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div
