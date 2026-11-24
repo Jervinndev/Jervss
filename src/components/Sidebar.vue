@@ -30,9 +30,9 @@ const overlay = ref(null);
             :class="isOpen ? 'fixed inset-0 z-150 flex bg-black/50 sm:static sm:bg-transparent w-78' : 'hidden sm:block'"
             @click.self="emit('close')">
             <aside
-                class="flex items-start justify-start h-full w-78 light:text-gray-900 light:bg-white bg-black z-50 border light:border-black/10 border-white/15">
+                class="flex items-start justify-start h-full w-78 light:text-gray-900 light:bg-white 2xl:rounded-2xl rounded-none bg-black z-50 border light:border-black/10 border-white/15">
                 <nav
-                    class="mx-auto max-w-7xl w-full h-full light:text-black/60 light:bg-transparent text-white/80 flex flex-col items-start justify-between sm:p-3 md:p-6 p-6">
+                    class="mx-auto max-w-7xl w-full h-full light:text-black/60 light:bg-transparent text-white/80 flex flex-col items-start justify-between sm:p-3 md:p-6 p-4">
                     <div class="flex flex-col items-start justify-start w-full">
                         <div class="flex items-center justify-between w-full">
                             <h1 class="font-black font-mono light:text-black text-white">Mark Jervin</h1>
@@ -61,7 +61,7 @@ const overlay = ref(null);
 
                         <div class="flex flex-col items-center justify-center gap-4 w-full">
                             <ul
-                                class="flex flex-col gap-2 font-extrabold font-space-mono mt-8 w-full text-white/60 light:text-black/60">
+                                class="flex flex-col gap-2 font-extrabold font-space-mono 2xl:mt-8 mt-6 w-full text-white/60 light:text-black/60">
                                 <router-link to="/hero"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-gray-950 light:bg-gray-100">
