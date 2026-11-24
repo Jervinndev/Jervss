@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Ops+One&family=Changa+One:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Isometra&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Vast+Shadow&display=swap');
+@import "tailwindcss";
+
+@custom-variant light (&:where(.light, .light *));
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --font-space-mono: "Space Mono", monospace;
+  --font-archivo-black: "Archivo Black", sans-serif;
+  --font-changa-one: "Changa One", cursive;
+  --font-black-ops-one: "Black Ops One", cursive;
+  --font-Poppins: "Poppins", sans-serif;
+}
+
+/* View Transitions API - Circular Reveal */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Siguraduhing nasa ibabaw lagi ang bagong theme habang lumalaki */
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+
+/* --- BASE STYLES --- */
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  /* Default: Dark Mode Setup */
+  background-color: #000000;
+}
+
+/* --- LIGHT MODE OVERRIDE --- */
+html.light {
+  background-color: #f8fafc;
+  color: #111827;
+
+  /* Dotted Pattern */
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 15%, transparent 15%),
+    radial-gradient(rgba(0, 0, 0, 0.1) 15%, transparent 15%);
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+}
+
+.overlap {
+  transition: background-color 1s ease-in-out;
+}
+
+.dot {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 15%, transparent 15%),
+    radial-gradient(rgba(0, 0, 0, 0.1) 15%, transparent 15%);
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+}
