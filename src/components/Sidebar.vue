@@ -27,8 +27,7 @@ const overlay = ref(null);
         leave-active-class="transition-transform duration-300 ease-in" enter-from-class="-translate-x-full"
         enter-to-class="translate-x-0" leave-from-class="translate-x-0" leave-to-class="-translate-x-full">
         <section v-if="isOpen || isDesktop" class="dot h-full"
-            :class="isOpen ? 'fixed inset-0 z-150 flex bg-black/50 sm:static sm:bg-transparent w-78' : 'hidden sm:block'"
-            @click.self="emit('close')">
+            :class="isOpen ? 'fixed inset-0 z-150 flex bg-black/50 sm:static sm:bg-transparent w-78' : 'hidden sm:block'">
             <aside
                 class="flex items-start justify-start h-full w-78 light:text-gray-900 light:bg-white 2xl:rounded-2xl rounded-none bg-black z-50 border light:border-black/10 border-white/15">
                 <nav
@@ -62,25 +61,25 @@ const overlay = ref(null);
                         <div class="flex flex-col items-center justify-center gap-4 w-full">
                             <ul
                                 class="flex flex-col gap-2 font-extrabold font-space-mono 2xl:mt-8 mt-6 w-full text-white/60 light:text-black/60">
-                                <router-link to="/hero"
+                                <router-link to="/hero" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-gray-950 light:bg-gray-100">
                                     <House size="20" />
                                     <p>Home</p>
                                 </router-link>
-                                <router-link to="/about"
+                                <router-link to="/about" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-gray-950 light:bg-gray-100">
                                     <Info size="20" />
                                     <p>About</p>
                                 </router-link>
-                                <router-link to="/projects"
+                                <router-link to="/projects" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-gray-950 light:bg-gray-100">
                                     <FolderKanban size="20" />
                                     <p>Projects</p>
                                 </router-link>
-                                <router-link to="/collaboration"
+                                <router-link to="/collaboration" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-gray-950 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-gray-950 light:bg-gray-100">
                                     <PhoneLog size="20" />
