@@ -13,7 +13,7 @@ const project = ref([
         id: 1,
         title: "Web App",
         img: img1,
-        sub: "Beginhub",
+        sub: "Herb And Angel",
         par: "Online certification platform for beginners students and to showcase your knwolegde and soft skills.",
         year: "2025",
         view: Globe,
@@ -24,7 +24,7 @@ const project = ref([
         id: 2,
         title: "Web App",
         img: img2,
-        sub: "Sarah Keyk",
+        sub: "SarahKeyk",
         par: "A digital marketing showcase designed to boost brand visibility and engagement through a visually appealing online.",
         year: "2025",
         view: Globe,
@@ -91,7 +91,7 @@ onMounted(() => {
                             </div>
                         </div>
                         <p class="text-sm font-space-mono leading-7 text-white/50 light:text-black/60 mt-5">{{ pro.par
-                        }}</p>
+                            }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div

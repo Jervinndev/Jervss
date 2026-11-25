@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 import gsap from 'gsap';
-import { Globe } from '@lucide/vue';
+import { Globe, Gamepad2, Component, Code } from '@lucide/vue';
 import designerImg from '/src/assets/Markdesigner.png'
 import gamerImg from '/src/assets/Markgamerss.png'
 import developerImg from '/src/assets/Marksss.png'
@@ -16,8 +16,8 @@ const parasec = ref(null)
 const parathir = ref(null)
 const imges = ref(null)
 const habit = ref(null)
-const active = ref('gamer')
-const currentImg = computed(() => tabs.find(t => t.key === active.value).img)
+const active = ref('Gamer')
+const currentImg = computed(() => tabs.find(t => t.label === active.value)?.img)
 const proj = ref(null)
 
 const project = ref([
@@ -25,7 +25,7 @@ const project = ref([
         id: 1,
         title: "Web App",
         img: img1,
-        sub: "Beginhub",
+        sub: "Herb And Angel",
         par: "Online certification platform for beginners students and to showcase your knwolegde and soft skills.",
         year: "2025",
         view: Globe,
@@ -57,9 +57,9 @@ const project = ref([
 ])
 
 const tabs = [
-    { key: 'gamer', label: 'Gamer', img: gamerImg },
-    { key: 'designer', label: 'Designer', img: designerImg },
-    { key: 'developer', label: 'Developer', img: developerImg },
+    { icon: Gamepad2, label: 'Gamer', img: gamerImg },
+    { icon: Component, label: 'Designer', img: designerImg },
+    { icon: Code, label: 'Developer', img: developerImg },
 ]
 
 const stats = [
@@ -131,7 +131,7 @@ onMounted(() => {
 
                 </h1>
                 <p ref="paragraphRef"
-                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/90">
+                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/80">
                     I'm a <span class="font-bold">Front-end Developer</span> crafting seamless,
                     modern,
                     and animated
@@ -140,7 +140,7 @@ onMounted(() => {
 
                 </p>
                 <p ref="parasec"
-                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/90">
+                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/80">
                     I turn <span class="p-2 light:bg-gray-200 bg-white/20 rounded-md">business problems</span> into
                     clean, fast, and
                     easy-to-use
@@ -151,7 +151,7 @@ onMounted(() => {
 
                 </p>
                 <p ref="parathir"
-                    class="font-Poppins font-normal tracking-wide 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/90">
+                    class="font-Poppins font-normal tracking-wide 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/80">
                     Always learning, always building. <span class="font-bold">Let's collaborate!</span>
 
                 </p>
@@ -170,12 +170,12 @@ onMounted(() => {
                     </button>
                 </div>
                 <div ref="habit" class="flex items-center justify-start gap-2 2xl:w-fit w-full">
-                    <button v-for="t in tabs" :key="t.key" @click="active = t.key"
-                        class="flex items-center justify-center rounded-2xl px-4 py-2 font-Poppins text-sm transition-colors duration-200"
-                        :class="active === t.key
+                    <button v-for="t in tabs" :key="t.label" @click="active = t.label" :title="t.label"
+                        class="flex items-center justify-center rounded-2xl p-3 font-Poppins text-sm transition-colors duration-200"
+                        :class="active === t.label
                             ? 'bg-black text-white'
                             : 'bg-gray-100 text-black/80 hover:bg-gray-200'">
-                        {{ t.label }}
+                        <component :is="t.icon" class="w-5 h-5" />
                     </button>
                 </div>
             </div>
@@ -253,7 +253,7 @@ onMounted(() => {
                             </div>
                         </div>
                         <p class="text-sm font-space-mono leading-7 text-white/60 light:text-black/60 mt-5">{{ pro.par
-                            }}</p>
+                        }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div
