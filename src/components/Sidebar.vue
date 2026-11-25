@@ -15,7 +15,7 @@ defineProps({
 
 const emit = defineEmits(['close'])
 
-const { setDark, setLight, setSystem } = useTheme()
+const { Currenttheme, setDark, setLight, setSystem } = useTheme()
 const { isMuted, toggleMute } = useSound()
 const isDesktop = useMediaQuery('(min-width: 640px)')
 
@@ -34,7 +34,8 @@ const overlay = ref(null);
                     class="mx-auto max-w-7xl w-full h-full light:text-black/60 light:bg-transparent text-white/80 flex flex-col items-start justify-between sm:p-3 md:p-6 p-4">
                     <div class="flex flex-col items-start justify-start w-full">
                         <div class="flex items-center justify-between w-full">
-                            <h1 class="font-black font-mono light:text-black text-white">Jervss</h1>
+                            <router-link to="/"
+                                class="font-black font-mono light:text-black text-white">Jervss</router-link>
                             <div @click="handleThemeToggle"
                                 class=" p-0.5 rounded-4xl flex items-center justify-center gap-0.5 light:bg-gray-100 bg-black cursor-pointer">
                                 <div @click="setDark"
@@ -103,7 +104,8 @@ const overlay = ref(null);
                             <Bot size="20" />
                             <p class="font-bold">Chat with boss jervs</p>
                         </router-link>
-                        <p class="light:text-black/60 text-white/60 font-light 2xl:text-[16px] text-sm font-space-mono">
+                        <p
+                            class="light:text-black/60 mb-1 text-white/60 font-light 2xl:text-[16px] text-sm font-space-mono">
                             "Building practical, user-friendly applications made for real people and everyday use."
                         </p>
                         <div class="relative flex items-center justify-start gap-2 mt-4">

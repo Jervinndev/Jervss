@@ -111,7 +111,7 @@ onMounted(() => {
                     leave-active-class="transition-opacity duration-300" enter-from-class="opacity-0"
                     leave-to-class="opacity-0">
                     <img :key="currentImg" :src="currentImg" :alt="active"
-                        class="w-180 2xl:h-94 md:h-70 h-72 block 2xl:object-cover object-contain hover:grayscale-0 transition-all duration-500 cursor-pointer" />
+                        class="w-180 2xl:h-94 md:h-70 h-72 block 2xl:object-cover object-contain grayscale-85 hover:grayscale-0 transition-all duration-500 cursor-pointer" />
                 </Transition>
 
                 <div
@@ -141,7 +141,7 @@ onMounted(() => {
                 </p>
                 <p ref="parasec"
                     class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/80">
-                    I turn <span class="p-2 light:bg-gray-200 bg-white/20 rounded-md">business problems</span> into
+                    I turn <span class="px-2 light:bg-gray-200 bg-white/20 rounded-full">business problems</span> into
                     clean, fast, and
                     easy-to-use
                     websites. I
@@ -287,63 +287,55 @@ onMounted(() => {
             </div>
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex flex-col items-center justify-between transition-colors duration-500">
-                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
                     <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
                         <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem
-                            ipsum dolor
-                            sit amet consectetur
-                            adipisicing elit.
-                            Fugit, eos!</p>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I create
+                            clean,
+                            responsive website layouts that make your brand easy to recognize and your content easy to
+                            explore.</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
-                    <h1 class="font-mono text-white light:text-black/60">01</h1>
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">02</h1>
                     <div>
-                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem ipsum dolor
-                            sit
-                            amet
-                            consectetur
-                            adipisicing elit.
-                            Fugit, eos!</p>
+                        <h1 class="font-medium text-white/70 light:text-black">Grapich Designer</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I create
+                            eye-catching graphics and visual assets that help communicate your message and strengthen
+                            your brand.</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
-                    <h1 class="font-mono text-white light:text-black/60">01</h1>
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">03</h1>
                     <div>
-                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem ipsum dolor
-                            sit
-                            amet
-                            consectetur
-                            adipisicing elit.
-                            Fugit, eos!</p>
+                        <h1 class="font-medium text-white/70 light:text-black">Wed Development</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I build
+                            responsive, interactive websites with modern front-end technologies and a focus on
+                            usability.</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
-                    <h1 class="font-mono text-white light:text-black/60">01</h1>
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">04</h1>
                     <div>
-                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem ipsum dolor
-                            sit
-                            amet
-                            consectetur
-                            adipisicing elit.
-                            Fugit, eos!</p>
+                        <h1 class="font-medium text-white/70 light:text-black">Custome Software</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I develop
+                            software tailored to your needs, helping simplify tasks and solve specific business
+                            problems.</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
-                    <h1 class="font-mono text-white light:text-black/60">01</h1>
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">05</h1>
                     <div>
-                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem ipsum dolor
-                            sit
-                            amet
-                            consectetur
-                            adipisicing elit.
-                            Fugit, eos!</p>
+                        <h1 class="font-medium text-white/70 light:text-black">UI/UX Design</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I design
+                            intuitive interfaces and clear user flows to make digital products simple and enjoyable
+                            to use.</p>
                     </div>
                 </div>
             </div>
