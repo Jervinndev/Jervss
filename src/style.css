@@ -29,6 +29,16 @@
   z-index: 1;
 }
 
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+html:not(light) ::selection {
+
+  background-color: #000000;
+  color: #ffffff;
+}
 
 /* --- BASE STYLES --- */
 * {

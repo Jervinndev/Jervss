@@ -102,21 +102,31 @@ onMounted(() => {
 </script>
 
 <template>
+    <!-- Hero -->
     <section class="flex items-center justify-center 2xl:pt-20 pt-10">
         <div
-            class="mx-auto max-w-5xl w-full h-auto overflow-hidden 2xl:p-4 sm:p-6 p-2 gap-10 2xl:flex flex-row item-center justify-center">
-            <div ref="imges" class="items-center justify-center gap-10 2xl:mt-0 mt-5">
+            class="mx-auto max-w-5xl w-full h-auto 2xl:p-4 sm:p-6 p-2 gap-10 2xl:flex flex-row item-center justify-center">
+            <div ref="imges" class="relative items-center justify-center gap-10 2xl:mt-0 mt-5 group">
                 <Transition mode="out-in" enter-active-class="transition-opacity duration-300"
                     leave-active-class="transition-opacity duration-300" enter-from-class="opacity-0"
                     leave-to-class="opacity-0">
                     <img :key="currentImg" :src="currentImg" :alt="active"
-                        class="w-180 2xl:h-94 md:h-70 h-72 block 2xl:object-cover object-contain hover:grayscale-0 transition-all duration-500" />
+                        class="w-180 2xl:h-94 md:h-70 h-72 block 2xl:object-cover object-contain hover:grayscale-0 transition-all duration-500 cursor-pointer" />
                 </Transition>
+
+                <div
+                    class="absolute z-100 opacity-0 scale-95 translate-y-2 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none -left-15 top-0 rounded-2xl rounded-br-none font-Poppins p-4 light:bg-black bg-white light:text-white text-black shadow-xl">
+                    <h1 class="">Hello Everyone, It's me boss jervss.</h1>
+                    <!-- Buntot ng message bubble (bottom-right) -->
+                    <div
+                        class="absolute -bottom-2 right-0 w-0 h-0 border-l-[10px] border-l-transparent border-t-[10px] light:border-t-black border-t-white">
+                    </div>
+                </div>
             </div>
             <div class="flex flex-col gap-3.5 2xl:mt-0 mt-5">
 
                 <h1 ref="headlineRef"
-                    class="font-black 2xl:text-5xl text-3xl font-space-mono light:text-gray-900 text-gray-200">
+                    class="font-black 2xl:text-5xl text-xl font-space-mono light:text-gray-900 text-gray-200">
                     Jervin Villones
 
                 </h1>
@@ -172,9 +182,11 @@ onMounted(() => {
         </div>
     </section>
 
+
+    <!-- About -->
     <section id="about" class="bg-black light:bg-white text-white px-2 md:px-6 py-10">
         <div class="max-w-5xl mx-auto w-full">
-            <p class=" text-sm text-white/30 font-mono font-bold light:text-slate-950/40 mb-3">01 GET TO KNOW ME</p>
+            <p class=" text-sm text-white/30 font-mono font-bold light:text-slate-950/40 mb-3">GET TO KNOW ME</p>
             <div class="grid gap-14 items-start">
                 <!-- <div>
                     <h2
@@ -201,7 +213,7 @@ onMounted(() => {
                 <div class="grid grid-cols-2">
                     <div v-for="stat in stats" :key="stat.label"
                         class="bg-black/90 light:bg-white light:border-black/10 p-6 border-l border-b border-white/10">
-                        <p class="text-3xl font-black font-mono text-gray-200 light:text-black">{{ stat.value }}
+                        <p class="text-md font-black font-mono text-gray-200 light:text-black">{{ stat.value }}
                         </p>
                         <p class="text-white/60 font-normal font-Poppins light:text-black/40 text-sm mt-1 ">{{
                             stat.label }}</p>
@@ -211,11 +223,13 @@ onMounted(() => {
         </div>
     </section>
 
+
+    <!-- Project -->
     <section class="flex items-center justify-center w-full transition-colors duration-500 px-2 md:px-6">
         <div class="w-full flex items-center justify-center flex-col mt-4">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">02 PROJECT</h1>
+                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">PROJECT</h1>
                 <router-link to="/Projectmore"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
@@ -239,7 +253,7 @@ onMounted(() => {
                             </div>
                         </div>
                         <p class="text-sm font-space-mono leading-7 text-white/60 light:text-black/60 mt-5">{{ pro.par
-                        }}</p>
+                            }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div
@@ -260,7 +274,7 @@ onMounted(() => {
         <div class="w-full flex items-center justify-center flex-col mt-10">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">03 What i Do?</h1>
+                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">What i Do?</h1>
                 <router-link to="/Projectmore"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
@@ -276,8 +290,9 @@ onMounted(() => {
                 <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
                     <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
-                        <p class="font-mono text-white/60 light:text-black/60 2xl:text-[16px] text-sm">Lorem ipsum dolor
+                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem
+                            ipsum dolor
                             sit amet consectetur
                             adipisicing elit.
                             Fugit, eos!</p>
@@ -286,8 +301,11 @@ onMounted(() => {
                 <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
                     <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
-                        <p class="font-mono text-white/60 light:text-black/60">Lorem ipsum dolor sit amet consectetur
+                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem ipsum dolor
+                            sit
+                            amet
+                            consectetur
                             adipisicing elit.
                             Fugit, eos!</p>
                     </div>
@@ -295,8 +313,11 @@ onMounted(() => {
                 <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
                     <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
-                        <p class="font-mono text-white/60 light:text-black/60">Lorem ipsum dolor sit amet consectetur
+                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem ipsum dolor
+                            sit
+                            amet
+                            consectetur
                             adipisicing elit.
                             Fugit, eos!</p>
                     </div>
@@ -304,8 +325,11 @@ onMounted(() => {
                 <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
                     <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
-                        <p class="font-mono text-white/60 light:text-black/60">Lorem ipsum dolor sit amet consectetur
+                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem ipsum dolor
+                            sit
+                            amet
+                            consectetur
                             adipisicing elit.
                             Fugit, eos!</p>
                     </div>
@@ -313,8 +337,11 @@ onMounted(() => {
                 <div class="flex items-center gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
                     <h1 class="font-mono text-white light:text-black/60">01</h1>
                     <div>
-                        <h1 class="font-medium text-white light:text-black">Wed Design</h1>
-                        <p class="font-mono text-white/60 light:text-black/60">Lorem ipsum dolor sit amet consectetur
+                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60">Lorem ipsum dolor
+                            sit
+                            amet
+                            consectetur
                             adipisicing elit.
                             Fugit, eos!</p>
                     </div>

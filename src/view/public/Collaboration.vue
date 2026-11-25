@@ -116,49 +116,54 @@ async function handleSubmit() {
 
                     <!-- Availability -->
                     <div
-                        class="bg-[#0d0d0d] light:bg-white border border-white/10 light:border-black/10 rounded-xl px-5 py-4 flex items-center justify-between gap-3">
+                        class="bg-black light:bg-white border border-white/10 light:border-black/10 rounded-xl px-5 py-4 flex items-center justify-between gap-3">
                         <div class="flex items-center gap-2">
                             <div class="w-2.5 h-2.5 rounded-full bg-green-500 flex items-center justify-center">
                                 <div class="w-2.5 h-2.5 rounded-full p-1 bg-green-500 animate-ping"></div>
                             </div>
-                            <span class="text-sm text-white/50 light:text-black/50">Available for freelance work</span>
+                            <span class="text-sm font-Poppins text-white/50 light:text-black/50">Available for freelance
+                                work</span>
                         </div>
                         <Visitors />
                     </div>
                 </div>
 
                 <!-- RIGHT: Form -->
-                <div class="bg-[#0d0d0d] light:bg-white border border-white/10 light:border-black/10 rounded-xl p-6">
-                    <h3 class="text-lg font-bold mb-6  light:text-black/70">Send a message</h3>
+                <div class="bg-black light:bg-white border border-white/10 light:border-black/10 rounded-xl p-6">
+                    <h3 class="text-lg font-bold mb-6 font-archivo-black light:text-black/70">Send a message</h3>
 
                     <form @submit.prevent="handleSubmit" class="flex flex-col gap-5">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div>
-                                <label class="block text-xs text-white/50 light:text-black/50 mb-2">NAME</label>
+                                <label
+                                    class="block text-xs text-white/50 font-mono light:text-black/50 mb-2">NAME</label>
                                 <input v-model="form.name" type="text" placeholder="Juan Dela Cruz"
                                     class="w-full bg-black light:text-black/80 light:bg-gray-50 border border-white/10 light:border-black/10 rounded-lg px-4 py-3 text-sm outline-none focus:border-white/40 light:focus:border-black/40  transition-colors placeholder:text-white/30 light:placeholder:text-black/30" />
                             </div>
                             <div>
-                                <label class="block text-xs text-white/50  light:text-black/50 mb-2">EMAIL</label>
+                                <label
+                                    class="block text-xs text-white/50 font-mono light:text-black/50 mb-2">EMAIL</label>
                                 <input v-model="form.email" type="email" placeholder="you@email.com"
                                     class="w-full bg-black light:text-black/80 light:bg-gray-50 border border-white/10 light:border-black/10 rounded-lg px-4 py-3 text-sm outline-none focus:border-white/40 light:focus:border-black/40  transition-colors placeholder:text-white/30 light:placeholder:text-black/30" />
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-xs text-white/50  light:text-black/50 mb-2">SUBJECT</label>
+                            <label
+                                class="block text-xs text-white/50 font-mono light:text-black/50 mb-2">SUBJECT</label>
                             <input v-model="form.subject" type="text" placeholder="Project inquiry"
                                 class="w-full bg-black light:text-black/80 light:bg-gray-50 border border-white/10 light:border-black/10 rounded-lg px-4 py-3 text-sm outline-none focus:border-white/40 light:focus:border-black/40  transition-colors placeholder:text-white/30 light:placeholder:text-black/30" />
                         </div>
 
                         <div>
-                            <label class="block text-xs text-white/50  light:text-black/50 mb-2">MESSAGE</label>
+                            <label
+                                class="block text-xs text-white/50 font-mono light:text-black/50 mb-2">MESSAGE</label>
                             <textarea v-model="form.message" rows="5" placeholder="Tell me about your project..."
                                 class="w-full bg-black light:text-black/80 light:bg-gray-50 border border-white/10 light:border-black/10 rounded-lg px-4 py-3 text-sm outline-none focus:border-white/40 light:focus:border-black/40  transition-colors placeholder:text-white/30 light:placeholder:text-black/30" />
                         </div>
 
                         <button type="submit" :disabled="sending"
-                            class="mt-2 inline-flex items-center justify-center gap-2 bg-white light:bg-black light:text-white text-black font-semibold text-sm tracking-wide px-6 py-3.5 hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                            class="mt-2 inline-flex items-center justify-center gap-2 bg-white light:bg-black light:text-white text-black font-semibold text-sm tracking-wide px-6 py-3.5 hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed rounded-xl">
                             {{ sending ? 'SENDING...' : 'SEND MESSAGE' }}
                             <ArrowRight v-if="!sending" class="w-4 h-4" />
                         </button>

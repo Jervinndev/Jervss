@@ -64,7 +64,7 @@ onMounted(() => {
 <template>
     <section class="flex items-center justify-center w-full transition-colors duration-500 mt-10">
         <div class="w-full flex items-center justify-center flex-col mt-4">
-            <div
+            <!-- <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
                 <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">PROJECT</h1>
                 <router-link to="/Projectmore"
@@ -76,7 +76,7 @@ onMounted(() => {
                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
                     </svg>
                 </router-link>
-            </div>
+            </div> -->
 
             <div
                 class="mx-auto max-w-5xl w-full grid 2xl:grid-cols-3 md:grid-cols-3 grid-cols-1 pt-2 2xl:gap-4 gap-3.5">
@@ -91,7 +91,7 @@ onMounted(() => {
                             </div>
                         </div>
                         <p class="text-sm font-space-mono leading-7 text-white/50 light:text-black/60 mt-5">{{ pro.par
-                            }}</p>
+                        }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div
