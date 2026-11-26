@@ -8,6 +8,8 @@ import developerImg from '/src/assets/Marksss.png'
 import img1 from '/src/assets/logo - Copy - Copy.png'
 import img2 from '/src/assets/628313668_1630552038265675_735309556789731096_n.jpg'
 import img3 from '/src/assets/494642475_122133077852783934_881460682553165933_n.jpg'
+import { Icon } from '@iconify/vue';
+import Footer from '../../components/Footer.vue'
 
 const headlineRef = ref(null)
 const paragraphRef = ref(null)
@@ -68,6 +70,16 @@ const stats = [
     { value: "7", label: "Tools & technologies" },
     { value: "100%", label: "Dedication to detail" },
 ];
+
+const skillsinfo = ref([
+    { id: 1, skill: 'Html', icon: 'icomoon-free:html-five' },
+    { id: 2, skill: 'Css', icon: 'flowbite:css-solid' },
+    { id: 3, skill: 'Js', icon: 'cib:js' },
+    { id: 4, skill: 'Tailwind', icon: 'file-icons:tailwind' },
+    { id: 5, skill: 'Bootstrap', icon: 'bi:bootstrap-fill' },
+    { id: 6, skill: 'Vue.js', icon: 'akar-icons:vue-fill' },
+    { id: 7, skill: 'Figma', icon: 'basil:figma-outline' },
+])
 
 onMounted(() => {
     gsap.set(proj.value, {
@@ -184,9 +196,21 @@ onMounted(() => {
 
 
     <!-- About -->
-    <section id="about" class="bg-black light:bg-white text-white px-2 md:px-6 py-10">
+    <section ref="headlineRef" id="about" class="bg-black light:bg-white text-white px-2 md:px-6 py-10">
         <div class="max-w-5xl mx-auto w-full">
-            <p class=" text-sm text-white/30 font-mono font-bold light:text-slate-950/40 mb-3">GET TO KNOW ME</p>
+            <div
+                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
+                <h1 class="text-sm text-white/30 font-mono light:text-black/60">GET TO KWON ME</h1>
+                <router-link to="/about"
+                    class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
+                    VIEW ALL
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                </router-link>
+            </div>
             <div class="grid gap-14 items-start">
                 <!-- <div>
                     <h2
@@ -225,11 +249,12 @@ onMounted(() => {
 
 
     <!-- Project -->
-    <section class="flex items-center justify-center w-full transition-colors duration-500 px-2 md:px-6">
+    <section ref="paragraphRef"
+        class="flex items-center justify-center w-full transition-colors duration-500 px-2 md:px-6">
         <div class="w-full flex items-center justify-center flex-col mt-4">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">PROJECT</h1>
+                <h1 class="text-sm text-white/30 font-mono light:text-black/60">PROJECT</h1>
                 <router-link to="/Projectmore"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
@@ -270,11 +295,11 @@ onMounted(() => {
         </div>
     </section>
 
-    <section>
+    <section ref="parasec">
         <div class="w-full flex items-center justify-center flex-col mt-10">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">What i Do?</h1>
+                <h1 class="text-sm text-white/30 font-mono light:text-black/60">WHAT I DO?</h1>
                 <router-link to="/Projectmore"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
@@ -341,4 +366,35 @@ onMounted(() => {
             </div>
         </div>
     </section>
+
+    <section ref="parathir" class=" w-auto h-fit p-2 light:bg-white bg-black">
+        <main class="mx-auto max-w-5xl py-3 2xl:px-3 px-1 pt-4 border border-white/5 light:bg-white rounded-lg">
+            <div class="text-white/70 light:text-black flex items-center justify-between">
+                <h1 class="text-sm text-white/30 font-mono light:text-black/60">TECH STACK</h1>
+                <router-link to="/Skills"
+                    class="flex items-center justify-center gap-1 text-[12px] font-normal text-white/70 light:text-black/70">VIEW
+                    ALL
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                        class="bi bi-arrow-right" viewBox="0 0 16 16 text-white/70">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg></router-link>
+            </div>
+            <div class="grid 2xl:grid-cols-7 grid-cols-5 gap-2.5 w-fit text-gray-500 pt-4">
+                <div v-for="skills in skillsinfo" :key="skills.id">
+                    <div
+                        class="relative group flex items-center justify-center gap-3 rounded-2xl text-[13px] text-center text-gray-300 light:text-black">
+                        <Icon :icon="skills.icon" class="h-10 w-10 shrink-0 text-gray-500 hover:scale-120 transition"
+                            aria-hidden="true" />
+                        <div
+                            class="absolute p-2 -top-15 translate-y-2 group-hover:translate-y-0 opacity-0 light:bg-black bg-white group-hover:scale-120 group-hover:opacity-100 transition-all duration-100">
+                            <h1 class="light:text-white/60 text-black/70">{{ skills.skill }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <Footer class="font-mono" />
 </template>

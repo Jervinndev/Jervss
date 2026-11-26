@@ -3,31 +3,6 @@ import { reactive, ref, h } from 'vue'
 import emailjs from '@emailjs/browser'
 import Visitors from '../../components/visitors.vue'
 
-const MapPin = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
-    h('path', { d: 'M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z' }),
-    h('circle', { cx: '12', cy: '10', r: '3' })
-])
-const Mail = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
-    h('rect', { x: '2', y: '4', width: '20', height: '16', rx: '2' }),
-    h('path', { d: 'm22 6-10 7L2 6' })
-])
-const Github = () => h('svg', { viewBox: '0 0 24 24', fill: 'currentColor' }, [
-    h('path', { d: 'M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.3 4.3 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z' })
-])
-const Facebook = () => h('svg', { viewBox: '0 0 24 24', fill: 'currentColor' }, [
-    h('path', { d: 'M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6C15.9 3.5 15 3.4 14 3.4c-2.4 0-4 1.4-4 4.1v2.4H7.3V13H10v8h3.5Z' })
-])
-const ArrowRight = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
-    h('path', { d: 'M5 12h14M13 6l6 6-6 6' })
-])
-
-const contactInfo = [
-    { label: 'LOCATION', value: 'Binangonan, Rizal', href: '#', icon: MapPin },
-    { label: 'EMAIL', value: 'email@gmail.com', href: 'mailto:email@gmail.com', icon: Mail },
-    { label: 'GITHUB', value: 'bortikan/github.com', href: 'https://github.com/bortikan', icon: Github },
-    { label: 'FACEBOOK', value: 'Jervin Anain Villones', href: '#', icon: Facebook },
-]
-
 const form = reactive({ name: '', email: '', subject: '', message: '' })
 const submitted = ref(false)
 const sending = ref(false)
@@ -79,17 +54,9 @@ async function handleSubmit() {
 <template>
     <section id="contact" class=" text-white px-2 md:px-10 py-10 mt-5">
         <div class=" max-w-7xl mx-auto">
-            <!-- Eyebrow + Heading -->
-            <p class="text-white/30 font-mono light:text-black/30 tracking-[0.3em] text-xs font-semibold mb-2">
-                LET'S TALK
-            </p>
-            <h2 class="text-3xl font-mono light:text-black md:text-5xl font-black tracking-tight mb-2">
-                CONTACT
-            </h2>
-
+            <p class="text-white/30 font-mono light:text-black/30 tracking-[0.3em] text-xs font-semibold mb-2">LET'S TALK</p>
+            <h2 class="text-3xl font-mono light:text-black md:text-5xl font-black tracking-tight mb-2">CONTACT</h2>
             <div class="grid grid-cols-1 gap-4">
-
-                <!-- LEFT: Info -->
                 <div class="flex flex-col justify-between gap-4">
                     <div>
                         <p
@@ -113,8 +80,6 @@ async function handleSubmit() {
                             </span>
                         </a>
                     </div> -->
-
-                    <!-- Availability -->
                     <div
                         class="bg-black light:bg-white border border-white/10 light:border-black/10 rounded-xl px-5 py-4 flex items-center justify-between gap-3">
                         <div class="flex items-center gap-2">
@@ -127,8 +92,6 @@ async function handleSubmit() {
                         <Visitors />
                     </div>
                 </div>
-
-                <!-- RIGHT: Form -->
                 <div class="bg-black light:bg-white border border-white/10 light:border-black/10 rounded-xl p-6">
                     <h3 class="text-lg font-bold mb-6 font-archivo-black light:text-black/70">Send a message</h3>
 
@@ -176,7 +139,6 @@ async function handleSubmit() {
                         </p>
                     </form>
                 </div>
-
             </div>
         </div>
     </section>

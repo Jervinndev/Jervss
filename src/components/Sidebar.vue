@@ -27,9 +27,10 @@ const overlay = ref(null);
         leave-active-class="transition-transform duration-300 ease-in" enter-from-class="-translate-x-full"
         enter-to-class="translate-x-0" leave-from-class="translate-x-0" leave-to-class="-translate-x-full">
         <section v-if="isOpen || isDesktop" class="h-full"
-            :class="isOpen ? 'fixed inset-0 z-150 flex bg-black/50 sm:static sm:bg-transparent w-78' : 'hidden sm:block'">
+            :class="isOpen ? 'fixed inset-0 z-150 flex bg-black/50 sm:static sm:bg-transparent w-70' : 'hidden sm:block'"
+            @click="emit('close')">
             <aside
-                class="flex items-start justify-start h-full w-78 light:text-gray-900 light:bg-white bg-black z-50 2xl:border border-r light:border-black/10 border-white/10">
+                class="flex items-start justify-start h-full w-70 light:text-gray-900 light:bg-white bg-black z-50 2xl:border border-r light:border-black/10 border-white/10">
                 <nav
                     class="mx-auto max-w-7xl w-full h-full light:text-black/60 light:bg-transparent text-white/80 flex flex-col items-start justify-between sm:p-3 md:p-6 p-4">
                     <div class="flex flex-col items-start justify-start w-full">
@@ -57,11 +58,9 @@ const overlay = ref(null);
                                 <VolumeX v-else :size="16" />
                             </div>
                         </div>
-                        <hr class="border-gray-200/10 light:border-gray-200/90">
-
                         <div class="flex flex-col items-center justify-center gap-4 w-full">
                             <ul
-                                class="flex flex-col 2xl:text-[16px] text-sm gap-2 font-medium font-space-mono 2xl:mt-8 mt-6 w-full text-white/60 light:text-black/60">
+                                class="flex flex-col 2xl:text-[16px] text-sm gap-2 font-extrabold font-space-mono 2xl:mt-8 mt-6 w-full text-white/60 light:text-black/60">
                                 <router-link to="/hero" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-white/10 light:bg-gray-100">
@@ -74,7 +73,7 @@ const overlay = ref(null);
                                     <Info size="20" />
                                     <p>About</p>
                                 </router-link>
-                                <router-link to="/Service" @click="emit('close')"
+                                <router-link to="/whatido" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-white/10 light:bg-gray-100">
                                     <Layers size="20" />
@@ -86,13 +85,18 @@ const overlay = ref(null);
                                     <FolderKanban size="20" />
                                     <p>Projects</p>
                                 </router-link>
+                                <router-link to="/Skills" @click="emit('close')"
+                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
+                                    active-class="bg-white/10 light:bg-gray-100">
+                                    <FolderKanban size="20" />
+                                    <p>Skills</p>
+                                </router-link>
                                 <router-link to="/collaboration" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
                                     active-class="bg-white/10 light:bg-gray-100">
                                     <SquareKanbanPlus size="20" />
                                     <p>Collaboration</p>
                                 </router-link>
-                                <hr class="border-gray-200/10 light:border-gray-200/90">
                             </ul>
                         </div>
                     </div>

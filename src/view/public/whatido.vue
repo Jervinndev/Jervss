@@ -40,27 +40,69 @@ onMounted(() => {
 
 
 <template>
-    <section
-        class="w-full flex items-center justify-center text-start 2xl:p-3 p-3 overflow-hidden pt-5 bg-black light:bg-gray-50/70">
-        <main class="mx-auto max-w-7xl w-full border border-white/5 light:bg-transparent rounded-lg">
-            <div class="text-white/70 pl-3 pt-3 light:text-black">
-                <h1 class="text-sm font-black">
-                    WHAT I DO?
-                </h1>
+    <section ref="parasec">
+        <div class="w-full flex items-center justify-center flex-col mt-10">
+            <div
+                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
+                <router-link to="/Projectmore"
+                    class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">BACK
+                    TO HOME
+                </router-link>
             </div>
             <div
-                class="grid 2xl:grid-cols-3 md:grid-cols-3 grid-cols-1 2xl:gap-4 gap-3 3.5 mx-auto max-w-7xl wlight:bg-white-full p-3 pt-4">
-                <div v-for="techs in tech" :key="tech.id"
-                    class="flex items-center gap-3 light:border-black/10 bg-[#0d0d0d] light:bg-white border border-white/10 p-3 rounded-lg">
-                    <div class="bg-white w-fit p-2.5 rounded-2xl">
-                        <img :src="techs.svg" alt="" class="w-6 h-6" />
+                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex flex-col items-center justify-between transition-colors duration-500">
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">01</h1>
+                    <div>
+                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I create
+                            clean,
+                            responsive website layouts that make your brand easy to recognize and your content easy to
+                            explore.</p>
                     </div>
-                    <div ref="des" class=" light:border-gray-200/50 light:bg-[#fefefe]">
-                        <p class="font-bold text-md light:text-black/70 text-white/70">{{ techs.skills }}</p>
-                        <h1 class="text-sm font-light text-white/30 light:text-black/50">{{ techs.title }}</h1>
+                </div>
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">02</h1>
+                    <div>
+                        <h1 class="font-medium text-white/70 light:text-black">Grapich Designer</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I create
+                            eye-catching graphics and visual assets that help communicate your message and strengthen
+                            your brand.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">03</h1>
+                    <div>
+                        <h1 class="font-medium text-white/70 light:text-black">Wed Development</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I build
+                            responsive, interactive websites with modern front-end technologies and a focus on
+                            usability.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">04</h1>
+                    <div>
+                        <h1 class="font-medium text-white/70 light:text-black">Custome Software</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I develop
+                            software tailored to your needs, helping simplify tasks and solve specific business
+                            problems.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
+                    <h1 class="font-mono text-white light:text-black/60">05</h1>
+                    <div>
+                        <h1 class="font-medium text-white/70 light:text-black">UI/UX Design</h1>
+                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I design
+                            intuitive interfaces and clear user flows to make digital products simple and enjoyable
+                            to use.</p>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     </section>
 </template>
