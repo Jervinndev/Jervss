@@ -71,6 +71,34 @@ const stats = [
     { value: "100%", label: "Dedication to detail" },
 ];
 
+const services = [
+    {
+        id: 1,
+        title: "Wed Design",
+        description: "I create clean, responsive website layouts that make your brand easy to recognize and your content easy to explore."
+    },
+    {
+        id: 2,
+        title: "Grapich Designer",
+        description: "I create eye-catching graphics and visual assets that help communicate your message and strengthen your brand."
+    },
+    {
+        id: 3,
+        title: "Wed Development",
+        description: "I build responsive, interactive websites with modern front-end technologies and a focus on usability."
+    },
+    {
+        id: 4,
+        title: "Custome Software",
+        description: "I develop software tailored to your needs, helping simplify tasks and solve specific business problems."
+    },
+    {
+        id: 5,
+        title: "UI/UX Design",
+        description: "I design intuitive interfaces and clear user flows to make digital products simple and enjoyable to use."
+    }
+];
+
 const skillsinfo = ref([
     { id: 1, skill: 'Html', icon: 'icomoon-free:html-five' },
     { id: 2, skill: 'Css', icon: 'flowbite:css-solid' },
@@ -143,7 +171,7 @@ onMounted(() => {
 
                 </h1>
                 <p ref="paragraphRef"
-                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/80">
+                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-gray-300">
                     I'm a <span class="font-bold">Front-end Developer</span> crafting seamless,
                     modern,
                     and animated
@@ -152,18 +180,14 @@ onMounted(() => {
 
                 </p>
                 <p ref="parasec"
-                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/80">
+                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-gray-300">
                     I turn <span class="px-2 light:bg-gray-200 bg-white/20 rounded-full">business problems</span> into
                     clean, fast, and
                     easy-to-use
-                    websites. I
-                    start with your
-                    customers
-                    and goals, so every design has a purpose.
-
+                    websites.
                 </p>
                 <p ref="parathir"
-                    class="font-Poppins font-normal tracking-wide 2xl:text-lg text-sm leading-7 light:text-black/60 text-white/80">
+                    class="font-Poppins font-normal tracking-wide 2xl:text-lg text-sm leading-7 light:text-black/60 text-gray-300">
                     Always learning, always building. <span class="font-bold">Let's collaborate!</span>
 
                 </p>
@@ -239,13 +263,20 @@ onMounted(() => {
                         class="bg-black/90 light:bg-white light:border-black/10 p-6 border-l border-b border-white/10">
                         <p class="text-md font-black font-mono text-gray-200 light:text-black">{{ stat.value }}
                         </p>
-                        <p class="text-white/60 font-normal font-Poppins light:text-black/40 text-sm mt-1 ">{{
+                        <p class="text-gray-300/60 font-normal font-Poppins light:text-black/40 text-sm mt-1 ">{{
                             stat.label }}</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- 
+    <section>
+        <div class="mx-auto max-w-5xl w-full">
+            <img src="/src/assets/screencapture-botechka-vercel-app-2026-11-26-13_48_33.png" alt="" class="h-100 w-100">
+        </div>
+    </section> -->
 
 
     <!-- Project -->
@@ -277,8 +308,8 @@ onMounted(() => {
                                 <h1 class="text-xs font-Poppins text-white/30 light:text-black/50">{{ pro.title }}</h1>
                             </div>
                         </div>
-                        <p class="text-sm font-space-mono leading-7 text-white/60 light:text-black/60 mt-5">{{ pro.par
-                        }}</p>
+                        <p class="text-sm font-Poppins leading-7 text-gray-300/60 light:text-black/60 mt-5">{{ pro.par
+                            }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div
@@ -312,55 +343,14 @@ onMounted(() => {
             </div>
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex flex-col items-center justify-between transition-colors duration-500">
-                <div
-                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
-                    <h1 class="font-mono text-white light:text-black/60">01</h1>
-                    <div>
-                        <h1 class="font-medium text-white/70 light:text-black">Wed Design</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I create
-                            clean,
-                            responsive website layouts that make your brand easy to recognize and your content easy to
-                            explore.</p>
-                    </div>
-                </div>
-                <div
-                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
-                    <h1 class="font-mono text-white light:text-black/60">02</h1>
-                    <div>
-                        <h1 class="font-medium text-white/70 light:text-black">Grapich Designer</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I create
-                            eye-catching graphics and visual assets that help communicate your message and strengthen
-                            your brand.</p>
-                    </div>
-                </div>
-                <div
-                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
-                    <h1 class="font-mono text-white light:text-black/60">03</h1>
-                    <div>
-                        <h1 class="font-medium text-white/70 light:text-black">Wed Development</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I build
-                            responsive, interactive websites with modern front-end technologies and a focus on
-                            usability.</p>
-                    </div>
-                </div>
-                <div
+                <div v-for="service in services" :key="service.id"
                     class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
-                    <h1 class="font-mono text-white light:text-black/60">04</h1>
+                    <h1 class="font-mono text-white light:text-black/60">{{ String(service.id).padStart(2, '0') }}</h1>
                     <div>
-                        <h1 class="font-medium text-white/70 light:text-black">Custome Software</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I develop
-                            software tailored to your needs, helping simplify tasks and solve specific business
-                            problems.</p>
-                    </div>
-                </div>
-                <div
-                    class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
-                    <h1 class="font-mono text-white light:text-black/60">05</h1>
-                    <div>
-                        <h1 class="font-medium text-white/70 light:text-black">UI/UX Design</h1>
-                        <p class="font-mono 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">I design
-                            intuitive interfaces and clear user flows to make digital products simple and enjoyable
-                            to use.</p>
+                        <h1 class="font-medium text-white/70 light:text-black">{{ service.title }}</h1>
+                        <p class="font-Poppins 2xl:text-[16px] text-sm text-gray-300/60 light:text-black/60 mt-1.5">
+                            {{ service.description }}
+                        </p>
                     </div>
                 </div>
             </div>

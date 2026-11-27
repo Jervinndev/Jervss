@@ -60,39 +60,39 @@ const overlay = ref(null);
                         </div>
                         <div class="flex flex-col items-center justify-center gap-4 w-full">
                             <ul
-                                class="flex flex-col 2xl:text-[16px] text-sm gap-2 font-extrabold font-space-mono 2xl:mt-8 mt-6 w-full text-white/60 light:text-black/60">
+                                class="flex flex-col 2xl:text-[16px] text-sm gap-2 font-normal font-space-mono 2xl:mt-8 mt-6 w-full text-gray-400 light:text-black/60">
                                 <router-link to="/hero" @click="emit('close')"
-                                    class="flex items-center gap-3 p-2 w-full hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
+                                    class="flex items-center gap-3 p-2 w-full hover:bg-white/10 light:hover:bg-gray-100 rounded-md hover:text-gray-300 hover:light:text-black"
                                     active-class="bg-white/10 light:bg-gray-100">
                                     <House size="20" />
                                     <p>Home</p>
                                 </router-link>
                                 <router-link to="/about" @click="emit('close')"
-                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
+                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md hover:text-gray-300 hover:light:text-black"
                                     active-class="bg-white/10 light:bg-gray-100">
                                     <Info size="20" />
                                     <p>About</p>
                                 </router-link>
                                 <router-link to="/whatido" @click="emit('close')"
-                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
+                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md hover:text-gray-300 hover:light:text-black"
                                     active-class="bg-white/10 light:bg-gray-100">
                                     <Layers size="20" />
                                     <p>Services</p>
                                 </router-link>
                                 <router-link to="/projects" @click="emit('close')"
-                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
+                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md hover:text-gray-300 hover:light:text-black"
                                     active-class="bg-white/10 light:bg-gray-100">
                                     <FolderKanban size="20" />
                                     <p>Projects</p>
                                 </router-link>
                                 <router-link to="/Skills" @click="emit('close')"
-                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
+                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md hover:text-gray-300 hover:light:text-black"
                                     active-class="bg-white/10 light:bg-gray-100">
                                     <FolderKanban size="20" />
                                     <p>Skills</p>
                                 </router-link>
                                 <router-link to="/collaboration" @click="emit('close')"
-                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
+                                    class="flex items-center gap-3 p-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md hover:text-gray-300 hover:light:text-black"
                                     active-class="bg-white/10 light:bg-gray-100">
                                     <SquareKanbanPlus size="20" />
                                     <p>Collaboration</p>
@@ -103,13 +103,13 @@ const overlay = ref(null);
                     <div>
                         <hr class="border-gray-200/10 light:border-gray-200/90 mb-5">
                         <router-link to="/community" @click="emit('close')"
-                            class="flex items-center gap-3 p-2 mb-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md"
+                            class="flex items-center gap-3 p-2 mb-2 w-full  hover:bg-white/10 light:hover:bg-gray-100 rounded-md hover:text-gray-300 hover:light:text-black"
                             active-class="bg-white/10 light:bg-gray-100">
                             <Bot size="20" />
                             <p class="font-bold">Chat with boss jervs</p>
                         </router-link>
                         <p
-                            class="light:text-black/60 mb-1 text-white/60 font-light 2xl:text-[16px] text-sm font-space-mono">
+                            class="light:text-black/60 mb-1 text-gray-400 font-light 2xl:text-[16px] text-sm font-space-mono">
                             "Building practical, user-friendly applications made for real people and everyday use."
                         </p>
                         <div class="relative flex items-center justify-start gap-2 mt-4">
