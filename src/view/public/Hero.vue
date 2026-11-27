@@ -8,6 +8,11 @@ import developerImg from '/src/assets/Marksss.png'
 import img1 from '/src/assets/logo - Copy - Copy.png'
 import img2 from '/src/assets/628313668_1630552038265675_735309556789731096_n.jpg'
 import img3 from '/src/assets/494642475_122133077852783934_881460682553165933_n.jpg'
+import islanderProject from '/src/assets/Screenshot 2026-05-01 201959.png'
+import sarahKeykProject from '/src/assets/Screenshot 2026-05-18 191618.png'
+import beginHubProject from '/src/assets/Screenshot 2026-06-10 220301.png'
+import botikaProject from '/src/assets/Screenshot 2026-07-05 181319.png'
+import botechkaProject from '/src/assets/screencapture-botechka-vercel-app-2026-11-26-13_48_33.png'
 import { Icon } from '@iconify/vue';
 import Footer from '../../components/Footer.vue'
 
@@ -58,6 +63,24 @@ const project = ref([
     }
 ])
 
+const projectGallery = [
+    [
+        { id: 'beginhub', src: beginHubProject, alt: 'BeginHub project screenshot' },
+        { id: 'islander', src: islanderProject, alt: 'Halamanerong Islander project screenshot' },
+    ],
+    [
+        { id: 'sarah-keyk', src: sarahKeykProject, alt: 'Sarah Keyk project screenshot' },
+        { id: 'botika', src: botikaProject, alt: 'Botikangwapo project screenshot' },
+        { id: 'beginhub-2', src: beginHubProject, alt: 'BeginHub project screenshot' },
+    ],
+    [
+        { id: 'botechka', src: botechkaProject, alt: 'BoteChka project screenshot' },
+        { id: 'islander-2', src: islanderProject, alt: 'Halamanerong Islander project screenshot' },
+        { id: 'sarah-keyk-2', src: sarahKeykProject, alt: 'Sarah Keyk project screenshot' },
+        { id: 'botika-2', src: botikaProject, alt: 'Botikangwapo project screenshot' },
+    ],
+]
+
 const tabs = [
     { icon: Gamepad2, label: 'Gamer', img: gamerImg },
     { icon: Component, label: 'Designer', img: designerImg },
@@ -107,6 +130,24 @@ const skillsinfo = ref([
     { id: 5, skill: 'Bootstrap', icon: 'bi:bootstrap-fill' },
     { id: 6, skill: 'Vue.js', icon: 'akar-icons:vue-fill' },
     { id: 7, skill: 'Figma', icon: 'basil:figma-outline' },
+])
+
+const frontend = ref([
+    { id: 1, skill: 'Html', icon: 'icomoon-free:html-five' },
+    { id: 2, skill: 'Css', icon: 'flowbite:css-solid' },
+    { id: 3, skill: 'Js', icon: 'cib:js' },
+    { id: 4, skill: 'Tailwind', icon: 'file-icons:tailwind' },
+    { id: 5, skill: 'Bootstrap', icon: 'bi:bootstrap-fill' },
+    { id: 6, skill: 'Vue.js', icon: 'akar-icons:vue-fill' },
+])
+
+const Backend = ref([
+    { id: 1, skill: 'None.js', icon: 'akar-icons:node-fill' }
+])
+
+const Databases = ref([
+    { id: 1, skill: 'Supabase', icon: 'bxl:supabase' },
+    { id: 2, skill: 'Mysql', icon: 'cib:mysql' },
 ])
 
 onMounted(() => {
@@ -166,13 +207,14 @@ onMounted(() => {
             <div class="flex flex-col gap-3.5 2xl:mt-0 mt-5">
 
                 <h1 ref="headlineRef"
-                    class="font-black 2xl:text-5xl text-xl font-space-mono light:text-gray-900 text-gray-200">
+                    class="font-black 2xl:text-5xl text-xl font-space-mono light:text-gray-900 text-white">
                     Jervin Villones
 
                 </h1>
                 <p ref="paragraphRef"
                     class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-gray-300">
-                    I'm a <span class="font-bold">Front-end Developer</span> crafting seamless,
+                    I'm a <span class="font-bold text-white light:text-black">Front-end Developer</span> crafting
+                    seamless,
                     modern,
                     and animated
                     web
@@ -188,7 +230,8 @@ onMounted(() => {
                 </p>
                 <p ref="parathir"
                     class="font-Poppins font-normal tracking-wide 2xl:text-lg text-sm leading-7 light:text-black/60 text-gray-300">
-                    Always learning, always building. <span class="font-bold">Let's collaborate!</span>
+                    Always learning, always building. <span class="font-bold text-white light:text-black">Let's
+                        collaborate!</span>
 
                 </p>
                 <div ref="buttonsRef" class="grid grid-cols-2 items-center justify-center gap-2 2xl:w-fit w-full">
@@ -224,7 +267,7 @@ onMounted(() => {
         <div class="max-w-5xl mx-auto w-full">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/30 font-mono light:text-black/60">GET TO KWON ME</h1>
+                <h1 class="text-sm text-white/50 font-mono light:text-black/60">GET TO KWON ME</h1>
                 <router-link to="/about"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
@@ -263,7 +306,7 @@ onMounted(() => {
                         class="bg-black/90 light:bg-white light:border-black/10 p-6 border-l border-b border-white/10">
                         <p class="text-md font-black font-mono text-gray-200 light:text-black">{{ stat.value }}
                         </p>
-                        <p class="text-gray-300/60 font-normal font-Poppins light:text-black/40 text-sm mt-1 ">{{
+                        <p class="text-white/60 font-normal font-Poppins light:text-black/40 text-sm mt-1 ">{{
                             stat.label }}</p>
                     </div>
                 </div>
@@ -271,13 +314,16 @@ onMounted(() => {
         </div>
     </section>
 
-    <!-- 
     <section>
         <div class="mx-auto max-w-5xl w-full">
-            <img src="/src/assets/screencapture-botechka-vercel-app-2026-11-26-13_48_33.png" alt="" class="h-100 w-100">
+            <div class="grid grid-cols-3 gap-2 sm:gap-3">
+                <div v-for="(column, columnIndex) in projectGallery" :key="columnIndex" class="flex flex-col gap-3">
+                    <img v-for="image in column" :key="image.id" :src="image.src" :alt="image.alt"
+                        class="w-full aspect-[4/3] object-cover grayscale rounded-xl border border-white/10 light:border-black/10">
+                </div>
+            </div>
         </div>
-    </section> -->
-
+    </section>
 
     <!-- Project -->
     <section ref="paragraphRef"
@@ -285,8 +331,8 @@ onMounted(() => {
         <div class="w-full flex items-center justify-center flex-col mt-4">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/30 font-mono light:text-black/60">PROJECT</h1>
-                <router-link to="/Projectmore"
+                <h1 class="text-sm text-white/50 font-mono light:text-black/60">PROJECT</h1>
+                <router-link to="/projects"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
@@ -302,13 +348,13 @@ onMounted(() => {
                     <div
                         class="p-6 grid grid-cols-1 gap-2.5 text-slate-100 light:text-gray-800 bg-black/90 border border-white/10 light:bg-white light:border-black/10 transition-colors duration-500 rounded-2xl h-full shadow-2xl shadow-black/60 light:shadow-gray-300/30 hover:-translate-y-2 transition-all duration-500">
                         <div class="flex items-start justify-start gap-4">
-                            <img :src="pro.img" alt="" class="h-15 w-15 object-cover rounded-xl">
+                            <img :src="pro.img" alt="" class="h-13 w-14 object-cover rounded-xl">
                             <div>
-                                <h2 class="font-bold font-mono text-white/70 light:text-black/70">{{ pro.sub }}</h2>
-                                <h1 class="text-xs font-Poppins text-white/30 light:text-black/50">{{ pro.title }}</h1>
+                                <h2 class="font-bold font-mono text-white/90 light:text-black/70">{{ pro.sub }}</h2>
+                                <h1 class="text-xs font-Poppins text-white/50 light:text-black/50">{{ pro.title }}</h1>
                             </div>
                         </div>
-                        <p class="text-sm font-Poppins leading-7 text-gray-300/60 light:text-black/60 mt-5">{{ pro.par
+                        <p class="text-sm font-Poppins leading-7 text-white/60 light:text-black/60 mt-5">{{ pro.par
                             }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
@@ -318,7 +364,7 @@ onMounted(() => {
                                 class="text-xs light:hover:text-white/80 hover:text-black/80 transition-colors flex items-center gap-1 bg-black text-black light:bg-white light:text-white p-2 rounded-2xl border border-gray-200/10 light:border-gray-200/90">
                                 <component :is="pro.view" class="w-5 h-5 light:text-black text-white" />
                             </a>
-                            <p class="text-xs font-space-mono text-white/30 light:text-slate-950/40">{{ pro.year }} </p>
+                            <p class="text-xs font-space-mono text-white/50 light:text-slate-950/40">{{ pro.year }} </p>
                         </div>
                     </div>
                 </div>
@@ -330,7 +376,7 @@ onMounted(() => {
         <div class="w-full flex items-center justify-center flex-col mt-10">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/30 font-mono light:text-black/60">WHAT I DO?</h1>
+                <h1 class="text-sm text-white/50 font-mono light:text-black/60">WHAT I DO?</h1>
                 <router-link to="/Projectmore"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
@@ -347,8 +393,8 @@ onMounted(() => {
                     class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10 p-4 w-full">
                     <h1 class="font-mono text-white light:text-black/60">{{ String(service.id).padStart(2, '0') }}</h1>
                     <div>
-                        <h1 class="font-medium text-white/70 light:text-black">{{ service.title }}</h1>
-                        <p class="font-Poppins 2xl:text-[16px] text-sm text-gray-300/60 light:text-black/60 mt-1.5">
+                        <h1 class="font-medium text-white/90 light:text-black">{{ service.title }}</h1>
+                        <p class="font-Poppins 2xl:text-[16px] text-sm text-white/60 light:text-black/60 mt-1.5">
                             {{ service.description }}
                         </p>
                     </div>
@@ -360,7 +406,7 @@ onMounted(() => {
     <section ref="parathir" class=" w-auto h-fit p-2 light:bg-white bg-black">
         <main class="mx-auto max-w-5xl py-3 2xl:px-3 px-1 pt-4 border border-white/5 light:bg-white rounded-lg">
             <div class="text-white/70 light:text-black flex items-center justify-between">
-                <h1 class="text-sm text-white/30 font-mono light:text-black/60">TECH STACK</h1>
+                <h1 class="text-sm text-white/50 font-mono light:text-black/60">TECH STACK</h1>
                 <router-link to="/Skills"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal text-white/70 light:text-black/70">VIEW
                     ALL
@@ -370,15 +416,53 @@ onMounted(() => {
                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
                     </svg></router-link>
             </div>
-            <div class="grid 2xl:grid-cols-7 grid-cols-5 gap-2.5 w-fit text-gray-500 pt-4">
-                <div v-for="skills in skillsinfo" :key="skills.id">
-                    <div
-                        class="relative group flex items-center justify-center gap-3 rounded-2xl text-[13px] text-center text-gray-300 light:text-black">
-                        <Icon :icon="skills.icon" class="h-10 w-10 shrink-0 text-gray-500 hover:scale-120 transition"
-                            aria-hidden="true" />
+            <div class="mt-8">
+                <h1 class="font-Poppins light:text-black/50 text-white/70">Front End</h1>
+                <div class="grid 2xl:grid-cols-7 grid-cols-5 gap-2.5 w-fit text-gray-500 mt-2">
+                    <div v-for="front in frontend" :key="front.id">
                         <div
-                            class="absolute p-2 -top-15 translate-y-2 group-hover:translate-y-0 opacity-0 light:bg-black bg-white group-hover:scale-120 group-hover:opacity-100 transition-all duration-100">
-                            <h1 class="light:text-white/60 text-black/70">{{ skills.skill }}</h1>
+                            class="relative group flex items-center justify-center gap-3 rounded-2xl text-[13px] text-center text-gray-300 light:text-black">
+                            <Icon :icon="front.icon"
+                                class="h-10 w-10 shrink-0 light:text-black/50 text-white/50 hover:scale-120 transition"
+                                aria-hidden="true" />
+                            <div
+                                class="absolute p-2 -top-15 translate-y-2 group-hover:translate-y-0 opacity-0 light:bg-black bg-white group-hover:scale-120 group-hover:opacity-100 transition-all duration-100">
+                                <h1 class="light:text-white text-black/70">{{ front.skill }}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6">
+                <h1 class="font-Poppins light:text-black/50 text-white/70">Back End</h1>
+                <div class="grid 2xl:grid-cols-7 grid-cols-5 gap-2.5 w-fit text-gray-500 mt-2">
+                    <div v-for="Back in Backend" :key="Back.id">
+                        <div
+                            class="relative group flex items-center justify-center gap-3 rounded-2xl text-[13px] text-center text-gray-300 light:text-black">
+                            <Icon :icon="Back.icon"
+                                class="h-10 w-10 shrink-0 light:text-black/50 text-white/50 hover:scale-120 transition"
+                                aria-hidden="true" />
+                            <div
+                                class="absolute p-2 -top-15 translate-y-2 group-hover:translate-y-0 opacity-0 light:bg-black bg-white group-hover:scale-120 group-hover:opacity-100 transition-all duration-100">
+                                <h1 class="light:text-white/60 text-black/70">{{ Back.skill }}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6">
+                <h1 class="font-Poppins light:text-black/50 text-white/70">Database</h1>
+                <div class="grid 2xl:grid-cols-7 grid-cols-5 gap-2.5 w-fit text-gray-500 mt-2">
+                    <div v-for="data in Databases" :key="data.id">
+                        <div
+                            class="relative group flex items-center justify-center gap-3 rounded-2xl text-[13px] text-center text-gray-300 light:text-black">
+                            <Icon :icon="data.icon"
+                                class="h-10 w-10 shrink-0 light:text-black/50 text-white/50 hover:scale-120 transition"
+                                aria-hidden="true" />
+                            <div
+                                class="absolute p-2 -top-15 translate-y-2 group-hover:translate-y-0 opacity-0 light:bg-black bg-white group-hover:scale-120 group-hover:opacity-100 transition-all duration-100">
+                                <h1 class="light:text-white/60 text-black/70">{{ data.skill }}</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
