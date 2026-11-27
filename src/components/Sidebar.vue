@@ -63,7 +63,7 @@ const overlay = ref(null);
                                 class="flex flex-col 2xl:text-[16px] text-sm gap-2 font-normal font-space-mono 2xl:mt-8 mt-6 w-full text-white/60 light:text-black/60">
                                 <router-link to="/hero" @click="emit('close')"
                                     class="flex items-center gap-3 p-2 w-full hover:bg-white/10 light:hover:bg-gray-100 rounded-md hover:text-gray-300 hover:light:text-black"
-                                    active-class="bg-white/10 light:bg-gray-100">
+                                    active-class="bg-white/10 light:bg-gray-100 light:text-black text-gray-300">
                                     <House size="20" />
                                     <p>Home</p>
                                 </router-link>
