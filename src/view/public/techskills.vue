@@ -34,14 +34,15 @@ const Databases = ref([
 </script>
 
 <template>
-    <section class=" w-auto h-fit p-2 light:bg-white bg-black">
+    <section class="w-full h-fit px-1 mt-10 light:bg-white bg-black">
         <main class="mx-auto max-w-5xl py-3 2xl:px-3 px-1 pt-4 border border-white/5 light:bg-white rounded-lg">
-            <div class="text-white/70 light:text-black flex items-center justify-start gap-2">
-                <MoveLeft class="light:text-black/40 text-white/40" />
-                <router-link to="/"
-                    class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">BACK
-                    TO HOME
+            <div
+                class="text-white/70 light:text-black flex items-center justify-between border-b border-white/10 light:border-black/10 pb-3">
+                <router-link to="/hero"
+                    class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
+                    BACK TO HOME
                 </router-link>
+                <span class="text-[12px] font-mono text-white/40 light:text-black/40">05 / SKILLS</span>
             </div>
             <div class="mt-8">
                 <h1 class="font-Poppins light:text-black/50 text-white/50">Front End</h1>

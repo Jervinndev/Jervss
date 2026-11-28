@@ -1,5 +1,6 @@
 <script setup>
 import { reactive, ref, h } from 'vue'
+import { ArrowRight } from '@lucide/vue'
 import emailjs from '@emailjs/browser'
 import Visitors from '../../components/visitors.vue'
 
@@ -52,9 +53,17 @@ async function handleSubmit() {
 
 
 <template>
-    <section id="contact" class=" text-white px-2 md:px-10 py-10 mt-5">
-        <div class=" max-w-7xl mx-auto">
-            <p class="text-white/30 font-mono light:text-black/30 tracking-[0.3em] text-xs font-semibold mb-2">LET'S TALK</p>
+    <section id="contact" class="text-white w-full px-1 py-6 mt-10">
+        <div class=" max-w-5xl mx-auto">
+            <div class="flex items-center justify-between border-b border-white/10 light:border-black/10 py-3 mb-6">
+                <router-link to="/hero"
+                    class="text-[12px] font-mono text-white/60 hover:text-white light:text-black/60 light:hover:text-black transition-colors">
+                    BACK TO HOME
+                </router-link>
+                <span class="text-[12px] font-mono text-white/40 light:text-black/40">07 / CONTACT</span>
+            </div>
+            <p class="text-white/30 font-mono light:text-black/30 tracking-[0.3em] text-xs font-semibold mb-2">LET'S
+                TALK</p>
             <h2 class="text-3xl font-mono light:text-black md:text-5xl font-black tracking-tight mb-2">CONTACT</h2>
             <div class="grid grid-cols-1 gap-4">
                 <div class="flex flex-col justify-between gap-4">

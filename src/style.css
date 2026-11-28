@@ -47,7 +47,7 @@ html:not(light) ::selection {
 
 html {
   /* Default: Dark Mode Setup */
-  background-color: #000000;
+  background-color: #000
 }
 
 /* --- LIGHT MODE OVERRIDE --- */

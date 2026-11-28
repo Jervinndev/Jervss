@@ -1,32 +1,22 @@
 <template>
-    <section class="2xl:mt-0 mt-15 flex items-center justify-center h-full">
-        <div
-            class="mx-auto max-w-5xl w-fit border light:border-black/10 border-white/10 p-4 rounded-xl bg-black light:bg-white">
-            <!-- <header>
-                <div class="flex items-center justify-start gap-4 font-Poppins">
-                    <img src="/src/assets/Marksss.png" alt="" class="w-13 rounded-full">
-                    <div>
-                        <h1 class="light:text-black text-white">Jervin Villones</h1>
-                        <h1 class="text-sm text-white light:text-black/50">Active</h1>
-                    </div>
-                </div>
-            </header>
-            <main class="relative p-4 h-100 mt-2">
-                <div
-                    class="p-2 bg-white light:bg-black light:text-white text-black w-fit rounded-lg rounded-bl-none font-Poppins">
-                    <p>Hello ako si jervin hayupp ka</p>
-                </div>
-                <div
-                    class="absolute bottom-0 right-0 p-2 bg-white light:bg-black light:text-white text-black w-fit rounded-lg rounded-br-none font-Poppins">
-                    <p>Hello ako si jervin hayupp ka</p>
-                </div>
-            </main>
-            <div class="flex gap-2 mt-2">
-                <input type="text" class="border light:border-black/10 border-white/10 p-2 rounded-lg w-full bg-white">
-                <button
-                    class="px-5 bg-black rounded-xl border light:border-black/10 border-white/10 text-white">Send</button>
-            </div> -->
-            <h1 class="light:text-black text-white font-mono">Comming Soon</h1>
+    <section class="w-full px-1 mt-10">
+        <div class="mx-auto max-w-5xl w-full">
+            <div class="flex items-center justify-between border-b border-white/10 light:border-black/10 py-3">
+                <router-link to="/hero"
+                    class="text-[12px] font-mono text-white/60 hover:text-white light:text-black/60 light:hover:text-black transition-colors">
+                    BACK TO HOME
+                </router-link>
+                <span class="text-[12px] font-mono text-white/40 light:text-black/40">08 / COMMUNITY</span>
+            </div>
+            <div class="py-10">
+                <p class="text-xs font-mono tracking-widest text-white/40 light:text-black/40">COMING SOON</p>
+                <h1 class="mt-3 font-black font-space-mono text-3xl sm:text-4xl text-white light:text-black">
+                    Community
+                </h1>
+                <p class="mt-4 max-w-xl font-Poppins text-sm leading-7 text-white/55 light:text-black/60">
+                    A space for sharing ideas, learning together, and connecting through the work.
+                </p>
+            </div>
         </div>
     </section>
 </template>

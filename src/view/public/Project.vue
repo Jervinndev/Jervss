@@ -5,6 +5,11 @@ import gsap from 'gsap';
 import img1 from '/src/assets/logo - Copy - Copy.png'
 import img2 from '/src/assets/628313668_1630552038265675_735309556789731096_n.jpg'
 import img3 from '/src/assets/494642475_122133077852783934_881460682553165933_n.jpg'
+import islanderProject from '/src/assets/Screenshot 2026-05-01 201959.png'
+import sarahKeykProject from '/src/assets/Screenshot 2026-05-18 191618.png'
+import beginHubProject from '/src/assets/Screenshot 2026-06-10 220301.png'
+import botikaProject from '/src/assets/Screenshot 2026-07-05 181319.png'
+import botechkaProject from '/src/assets/screencapture-botechka-vercel-app-2026-11-26-13_48_33.png'
 
 const proj = ref(null)
 
@@ -44,6 +49,24 @@ const project = ref([
     }
 ])
 
+const projectGallery = [
+    [
+        { id: 'beginhub', src: beginHubProject, alt: 'BeginHub project screenshot' },
+        { id: 'islander', src: islanderProject, alt: 'Halamanerong Islander project screenshot' },
+        { id: 'botika', src: botikaProject, alt: 'Botikangwapo project screenshot' },
+    ],
+    [
+        { id: 'sarah-keyk', src: sarahKeykProject, alt: 'Sarah Keyk project screenshot' },
+        { id: 'botechka', src: botechkaProject, alt: 'BoteChka project screenshot' },
+        { id: 'beginhub-2', src: beginHubProject, alt: 'BeginHub project screenshot' },
+    ],
+    [
+        { id: 'botika-2', src: botikaProject, alt: 'Botikangwapo project screenshot' },
+        { id: 'islander-2', src: islanderProject, alt: 'Halamanerong Islander project screenshot' },
+        { id: 'sarah-keyk-2', src: sarahKeykProject, alt: 'Sarah Keyk project screenshot' },
+    ],
+]
+
 
 onMounted(() => {
     gsap.set(proj.value, {
@@ -62,27 +85,20 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="flex items-center justify-center w-full transition-colors duration-500 mt-10">
-        <div class="w-full flex items-center justify-center flex-col mt-4">
-            <!-- <div
-                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/70 font-mono font-bold light:text-black/40">PROJECT</h1>
-                <router-link to="/Projectmore"
-                    class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
-                    VIEW ALL
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                        class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                    </svg>
+    <section class="w-full px-1 mt-10 transition-colors duration-500">
+        <div class="mx-auto max-w-5xl w-full">
+            <div class="flex items-center justify-between border-b border-white/10 light:border-black/10 py-3">
+                <router-link to="/hero"
+                    class="text-[12px] font-mono text-white/60 hover:text-white light:text-black/60 light:hover:text-black transition-colors">
+                    BACK TO HOME
                 </router-link>
-            </div> -->
+                <span class="text-[12px] font-mono text-white/40 light:text-black/40">03 / PROJECT</span>
+            </div>
 
-            <div
-                class="mx-auto max-w-5xl w-full grid 2xl:grid-cols-3 md:grid-cols-3 grid-cols-1 pt-2 2xl:gap-4 gap-3.5">
+            <div class="grid md:grid-cols-3 grid-cols-1 pt-5 gap-3.5 md:gap-4">
                 <div ref="proj" v-for="pro in project" :key="pro.id">
                     <div
-                        class="p-6 grid grid-cols-1 gap-2.5 text-slate-100 light:text-gray-800 bg-[#0d0d0d] border border-white/10 light:bg-white light:border-black/10 transition-colors duration-500 rounded-2xl h-full shadow-2xl shadow-black/20 light:shadow-gray-300 hover:shadow-black/40 hover:light:shadow-gray-400 hover:-translate-y-2 transition-all duration-500">
+                        class="p-5 md:p-6 grid grid-cols-1 gap-2.5 text-slate-100 light:text-gray-800 bg-[#0d0d0d] border border-white/10 light:bg-white light:border-black/10 transition-colors duration-500 rounded-xl h-full shadow-2xl shadow-black/20 light:shadow-gray-300 hover:shadow-black/40 hover:light:shadow-gray-400 hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-start justify-start gap-4">
                             <img :src="pro.img" alt="" class="h-15 w-15 object-cover rounded-xl">
                             <div>
@@ -105,6 +121,24 @@ onMounted(() => {
                     </div>
                 </div>
             </div>
+
+            <section aria-labelledby="gallery-title" class="mt-8 border-t border-white/10 light:border-black/10 pt-6 pb-8">
+                <div class="mb-4 flex items-end justify-between gap-4">
+                    <div>
+                        <p class="text-xs font-mono text-white/40 light:text-black/40">PROJECT ARCHIVE</p>
+                        <h2 id="gallery-title" class="mt-1 font-Poppins text-lg font-medium text-white/80 light:text-black/80">
+                            Selected screens
+                        </h2>
+                    </div>
+                    <span class="text-[11px] font-mono text-white/35 light:text-black/40">A CLOSER LOOK</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2.5 md:gap-3">
+                    <div v-for="(column, columnIndex) in projectGallery" :key="columnIndex" class="flex flex-col gap-2.5 md:gap-3">
+                        <img v-for="image in column" :key="image.id" :src="image.src" :alt="image.alt"
+                            class="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition duration-500 rounded-lg border border-white/10 light:border-black/10">
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
 </template>

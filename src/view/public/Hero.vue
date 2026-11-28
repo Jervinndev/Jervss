@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 import gsap from 'gsap';
-import { Globe, Gamepad2, Component, Code } from '@lucide/vue';
+import { Globe, Gamepad2, Component, Code, Handshake } from '@lucide/vue';
 import designerImg from '/src/assets/Markdesigner.png'
 import gamerImg from '/src/assets/Markgamerss.png'
 import developerImg from '/src/assets/Marksss.png'
@@ -16,16 +16,24 @@ import botechkaProject from '/src/assets/screencapture-botechka-vercel-app-2026-
 import { Icon } from '@iconify/vue';
 import Footer from '../../components/Footer.vue'
 
-const headlineRef = ref(null)
-const paragraphRef = ref(null)
-const buttonsRef = ref(null)
 const parasec = ref(null)
 const parathir = ref(null)
-const imges = ref(null)
-const habit = ref(null)
 const active = ref('Gamer')
 const currentImg = computed(() => tabs.find(t => t.label === active.value)?.img)
-const proj = ref(null)
+const proj = ref([])
+
+const highlights = [
+    { number: '01', title: 'Thoughtful design', description: 'Clear layouts and considered details make every screen feel easy to use.' },
+    { number: '02', title: 'Front-end craft', description: 'Responsive, interactive experiences built with modern front-end tools.' },
+    { number: '03', title: 'Always learning', description: 'Each project is a chance to improve, experiment, and build with more care.' },
+]
+
+const stats = [
+    { value: '2+', label: 'Years learning & building' },
+    { value: '10+', label: 'Projects completed' },
+    { value: '7', label: 'Tools & technologies' },
+    { value: '100%', label: 'Attention to detail' },
+]
 
 const project = ref([
     {
@@ -87,12 +95,12 @@ const tabs = [
     { icon: Code, label: 'Developer', img: developerImg },
 ]
 
-const stats = [
-    { value: "2+", label: "Years learning & building" },
-    { value: "10+", label: "Projects completed" },
-    { value: "7", label: "Tools & technologies" },
-    { value: "100%", label: "Dedication to detail" },
-];
+// const stats = [
+//     { value: "2+", label: "Years learning & building" },
+//     { value: "10+", label: "Projects completed" },
+//     { value: "7", label: "Tools & technologies" },
+//     { value: "100%", label: "Dedication to detail" },
+// ];
 
 const services = [
     {
@@ -166,12 +174,14 @@ onMounted(() => {
 })
 
 onMounted(() => {
-    gsap.set([imges.value, headlineRef.value, paragraphRef.value, parasec.value, parathir.value, buttonsRef.value, habit.value], {
+    const sectionTargets = [parasec.value, parathir.value].filter(Boolean)
+
+    gsap.set(sectionTargets, {
         opacity: 0,
         y: 30
     })
 
-    gsap.to([imges.value, headlineRef.value, paragraphRef.value, parasec.value, parathir.value, buttonsRef.value, habit.value], {
+    gsap.to(sectionTargets, {
         opacity: 1,
         y: 0,
         duration: 0.3,
@@ -184,86 +194,97 @@ onMounted(() => {
 
 <template>
     <!-- Hero -->
-    <section class="flex items-center justify-center 2xl:pt-20 pt-10">
-        <div
-            class="mx-auto max-w-5xl w-full h-auto 2xl:p-4 sm:p-6 p-2 gap-10 2xl:flex flex-row item-center justify-center">
-            <div ref="imges" class="relative items-center justify-center gap-10 2xl:mt-0 mt-5 group">
-                <Transition mode="out-in" enter-active-class="transition-opacity duration-300"
-                    leave-active-class="transition-opacity duration-300" enter-from-class="opacity-0"
-                    leave-to-class="opacity-0">
-                    <img :key="currentImg" :src="currentImg" :alt="active"
-                        class="w-180 2xl:h-94 md:h-70 h-72 block 2xl:object-cover object-contain grayscale-85 hover:grayscale-0 transition-all duration-500 cursor-pointer" />
-                </Transition>
+    <section class="w-full px-1 mt-10 transition-colors duration-500">
+        <main class="mx-auto max-w-5xl w-full">
+            <div class="flex items-center justify-between border-b border-white/10 light:border-black/10 py-3">
+                <span class="text-[12px] font-mono text-white/40 light:text-black/40">01 / HOME</span>
+            </div>
 
-                <div
-                    class="absolute z-100 opacity-0 scale-95 translate-y-2 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none -left-15 top-0 rounded-2xl rounded-br-none font-Poppins p-4 light:bg-black bg-white light:text-white text-black shadow-xl">
-                    <h1 class="">Hello Everyone, It's me boss jervss.</h1>
-                    <!-- Buntot ng message bubble (bottom-right) -->
+            <div class="grid md:grid-cols-[1.2fr_0.8fr] gap-8 md:gap-10 items-center py-8 md:py-10">
+                <div class="2xl:order-1 order-2">
+                    <p class="text-xs font-mono tracking-widest text-white/40 light:text-black/40">GET TO KNOW ME</p>
+                    <h1
+                        class="mt-4 font-black font-space-mono text-3xl sm:text-4xl md:text-5xl leading-tight text-white light:text-black">
+                        Building digital experiences with purpose.
+                    </h1>
+                    <p
+                        class="mt-5 max-w-2xl font-Poppins text-sm md:text-base leading-7 text-white/55 light:text-black/60">
+                        I’m Mark Jervin Villones, a front-end developer from Binangonan, Rizal. I turn ideas into clean,
+                        responsive websites that are easy to explore and enjoyable to use.
+                    </p>
+                    <p
+                        class="mt-3 max-w-2xl font-Poppins text-sm md:text-base leading-7 text-white/55 light:text-black/60">
+                        I care about thoughtful UI/UX, maintainable code, and the small details that bring an interface
+                        together. I’m always learning, building, and looking for ways to make my next project better.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span v-for="skill in ['Front-end development', 'UI/UX', 'Visual design']" :key="skill"
+                            class="rounded-full border border-white/10 light:border-black/10 px-3 py-1.5 text-xs font-mono text-white/55 light:text-black/55">
+                            {{ skill }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="relative mx-auto w-full max-w-sm order-1">
+                    <div class="absolute -inset-2 rounded-xl border border-white/10 light:border-black/10"></div>
                     <div
-                        class="absolute -bottom-2 right-0 w-0 h-0 border-l-[10px] border-l-transparent border-t-[10px] light:border-t-black border-t-white">
+                        class="relative overflow-hidden rounded-lg border border-white/10 light:border-black/10 bg-[#0d0d0d] light:bg-white">
+                        <img :src="developerImg" alt="Mark Jervin Villones, front-end developer"
+                            class="aspect-[4/4.2] w-full object-cover grayscale hover:grayscale-0 transition duration-500" />
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/90 to-transparent px-4 pb-4 pt-12">
+                            <div>
+                                <p class="font-mono text-sm text-white">Mark Jervin Villones</p>
+                                <p class="mt-1 text-xs font-Poppins text-white/60">Front-end Developer</p>
+                            </div>
+                            <span class="text-[11px] font-mono text-white/55">RIZAL, PH</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col gap-3.5 2xl:mt-0 mt-5">
 
-                <h1 ref="headlineRef"
-                    class="font-black 2xl:text-5xl text-xl font-space-mono light:text-gray-900 text-white">
-                    Jervin Villones
-
-                </h1>
-                <p ref="paragraphRef"
-                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-gray-300">
-                    I'm a <span class="font-bold text-white light:text-black">Front-end Developer</span> crafting
-                    seamless,
-                    modern,
-                    and animated
-                    web
-                    experiences.
-
-                </p>
-                <p ref="parasec"
-                    class="font-Poppins font-normal tracking-wide 2xl:w-xl w-full 2xl:text-lg text-sm leading-7 light:text-black/60 text-gray-300">
-                    I turn <span class="px-2 light:bg-gray-200 bg-white/20 rounded-full">business problems</span> into
-                    clean, fast, and
-                    easy-to-use
-                    websites.
-                </p>
-                <p ref="parathir"
-                    class="font-Poppins font-normal tracking-wide 2xl:text-lg text-sm leading-7 light:text-black/60 text-gray-300">
-                    Always learning, always building. <span class="font-bold text-white light:text-black">Let's
-                        collaborate!</span>
-
-                </p>
-                <div ref="buttonsRef" class="grid grid-cols-2 items-center justify-center gap-2 2xl:w-fit w-full">
-                    <button
-                        class="font-Poppins 2xl:p-4 p-3 2xl:w-fit md:w-fit w-full bg-slate-50 light:bg-black light:text-white rounded-lg text-black text-sm font-medium tracking-widest flex items-center justify-center gap-4">
-                        <a href="MarkJervinVilloneResume (2).pdf" download="MarkJervinVilloneResume (2).pdf"
-                            target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">Download CV
-
-                        </a>
-                    </button>
-                    <button
-                        class="2xl:p-4 p-3 2xl:w-fit md:w-fit w-full light:bg-white light:text-black bg-[#171717] rounded-lg text-white text-sm font-medium border border-gray-200/10 light:border-gray-200/90 tracking-widest flex items-center justify-center gap-4"><span>Connect
-                            Now
-                        </span>
-                    </button>
+            <section aria-labelledby="approach-title" class="border-t border-white/10 light:border-black/10 py-7">
+                <div class="mb-4 flex items-end justify-between gap-4">
+                    <div>
+                        <p class="text-xs font-mono text-white/40 light:text-black/40">WHAT I BRING</p>
+                        <h2 id="approach-title"
+                            class="mt-1 font-Poppins text-lg font-medium text-white/80 light:text-black/80">
+                            My approach
+                        </h2>
+                    </div>
+                    <router-link to="/whatido"
+                        class="shrink-0 text-[11px] font-mono text-white/50 hover:text-white light:text-black/50 light:hover:text-black transition-colors">
+                        EXPLORE SERVICES ↗
+                    </router-link>
                 </div>
-                <div ref="habit" class="flex items-center justify-start gap-2 2xl:w-fit w-full">
-                    <button v-for="t in tabs" :key="t.label" @click="active = t.label" :title="t.label"
-                        class="flex items-center justify-center rounded-2xl p-3 font-Poppins text-sm transition-colors duration-200"
-                        :class="active === t.label
-                            ? 'bg-black text-white'
-                            : 'bg-gray-100 text-black/80 hover:bg-gray-200'">
-                        <component :is="t.icon" class="w-5 h-5" />
-                    </button>
+                <div class="grid md:grid-cols-3 gap-3">
+                    <article v-for="item in highlights" :key="item.number"
+                        class="rounded-lg border border-white/10 light:border-black/10 bg-[#0d0d0d] light:bg-white p-4 md:p-5">
+                        <p class="font-mono text-xs text-white/35 light:text-black/35">{{ item.number }}</p>
+                        <h3 class="mt-4 font-Poppins text-sm font-medium text-white/80 light:text-black/80">{{
+                            item.title }}</h3>
+                        <p class="mt-2 font-Poppins text-xs leading-6 text-white/45 light:text-black/55">{{
+                            item.description }}</p>
+                    </article>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <section aria-label="Portfolio highlights"
+                class="grid grid-cols-2 md:grid-cols-4 border-t border-white/10 light:border-black/10 mb-8">
+                <div v-for="(stat, index) in stats" :key="stat.label"
+                    class="py-4 px-3 md:px-4 border-b md:border-b-0 border-white/10 light:border-black/10"
+                    :class="index < stats.length - 1 ? 'md:border-r' : ''">
+                    <p class="font-mono text-xl font-bold text-white/80 light:text-black/80">{{ stat.value }}</p>
+                    <p class="mt-1 font-Poppins text-[11px] leading-5 text-white/40 light:text-black/50">{{ stat.label
+                        }}</p>
+                </div>
+            </section>
+        </main>
     </section>
 
 
     <!-- About -->
-    <section ref="headlineRef" id="about" class="bg-black light:bg-white text-white px-2 md:px-6 py-10">
+    <!-- <section ref="headlineRef" id="about" class="bg-black light:bg-white text-white px-2 md:px-6 py-10">
         <div class="max-w-5xl mx-auto w-full">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
@@ -279,7 +300,7 @@ onMounted(() => {
                 </router-link>
             </div>
             <div class="grid gap-14 items-start">
-                <!-- <div>
+                <div>
                     <h2
                         class="font-black uppercase leading-[0.95] text-gray-200 light:text-black text-3xl 2xl:text-5xl tracking-tight mb-4">
                         About Me
@@ -298,9 +319,9 @@ onMounted(() => {
                         bringing designs to life with smooth motion and attention to
                         detail. Still learning, always building.
                     </p>
-                </div> -->
+                </div>
 
-                <!-- Right: stat cards -->
+                 Right: stat cards
                 <div class="grid grid-cols-2">
                     <div v-for="stat in stats" :key="stat.label"
                         class="bg-black/90 light:bg-white light:border-black/10 p-6 border-l border-b border-white/10">
@@ -312,26 +333,14 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-    </section>
-
-    <section>
-        <div class="mx-auto max-w-5xl w-full">
-            <div class="grid grid-cols-3 gap-2 sm:gap-3">
-                <div v-for="(column, columnIndex) in projectGallery" :key="columnIndex" class="flex flex-col gap-3">
-                    <img v-for="image in column" :key="image.id" :src="image.src" :alt="image.alt"
-                        class="w-full aspect-[4/3] object-cover grayscale rounded-xl border border-white/10 light:border-black/10">
-                </div>
-            </div>
-        </div>
-    </section>
+    </section> -->
 
     <!-- Project -->
-    <section ref="paragraphRef"
-        class="flex items-center justify-center w-full transition-colors duration-500 px-2 md:px-6">
+    <section class="flex items-center justify-center w-full transition-colors duration-500 px-2 md:px-6">
         <div class="w-full flex items-center justify-center flex-col mt-4">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/50 font-mono light:text-black/60">PROJECT</h1>
+                <h1 class="text-sm text-white/50 font-mono light:text-black/60">03 / PROJECT</h1>
                 <router-link to="/projects"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
@@ -355,7 +364,7 @@ onMounted(() => {
                             </div>
                         </div>
                         <p class="text-sm font-Poppins leading-7 text-white/60 light:text-black/60 mt-5">{{ pro.par
-                            }}</p>
+                        }}</p>
                         <hr class="border-gray-200/10 light:border-gray-200/90">
 
                         <div
@@ -372,12 +381,35 @@ onMounted(() => {
         </div>
     </section>
 
+    <section class="w-full px-2 md:px-6">
+        <div class="mx-auto max-w-5xl w-full border-t border-white/10 light:border-black/10 mt-7 pt-6">
+            <div class="mb-4 flex items-end justify-between gap-4">
+                <div>
+                    <p class="text-xs font-mono text-white/40 light:text-black/40">PROJECT ARCHIVE</p>
+                    <h2 class="mt-1 font-Poppins text-lg font-medium text-white/80 light:text-black/80">Selected screens
+                    </h2>
+                </div>
+                <router-link to="/projects"
+                    class="text-[11px] font-mono text-white/50 hover:text-white light:text-black/50 light:hover:text-black transition-colors">
+                    VIEW ALL PROJECTS ↗
+                </router-link>
+            </div>
+            <div class="grid grid-cols-3 md:grid-cols-3 gap-2 sm:gap-3">
+                <div v-for="(column, columnIndex) in projectGallery" :key="columnIndex"
+                    class="flex flex-col gap-2 sm:gap-3">
+                    <img v-for="image in column" :key="image.id" :src="image.src" :alt="image.alt"
+                        class="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition duration-500 rounded-lg border border-white/10 light:border-black/10">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section ref="parasec">
         <div class="w-full flex items-center justify-center flex-col mt-10">
             <div
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
-                <h1 class="text-sm text-white/50 font-mono light:text-black/60">WHAT I DO?</h1>
-                <router-link to="/Projectmore"
+                <h1 class="text-sm text-white/50 font-mono light:text-black/60">04 / SERVICES</h1>
+                <router-link to="/whatido"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">
                     VIEW ALL
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
@@ -403,15 +435,15 @@ onMounted(() => {
         </div>
     </section>
 
-    <section ref="parathir" class=" w-auto h-fit p-2 light:bg-white bg-black">
+    <section ref="parathir" class=" w-auto h-fit p-2 light:bg-white">
         <main class="mx-auto max-w-5xl py-3 2xl:px-3 px-1 pt-4 border border-white/5 light:bg-white rounded-lg">
             <div class="text-white/70 light:text-black flex items-center justify-between">
-                <h1 class="text-sm text-white/50 font-mono light:text-black/60">TECH STACK</h1>
+                <h1 class="text-sm text-white/50 font-mono light:text-black/60">05 / SKILLS</h1>
                 <router-link to="/Skills"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal text-white/70 light:text-black/70">VIEW
                     ALL
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                        class="bi bi-arrow-right" viewBox="0 0 16 16 text-white/70">
+                        class="bi bi-arrow-right text-white/70" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
                     </svg></router-link>

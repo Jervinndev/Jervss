@@ -6,9 +6,7 @@ import svg1 from '/src/assets/component.svg'
 import svg2 from '/src/assets/laptop-minimal.svg'
 import svg3 from '/src/assets/droplets.svg'
 
-const des = ref(null)
-const dev = ref(null)
-const uiux = ref(null)
+const servicesRef = ref(null)
 
 const tech = ref([
     {
@@ -22,12 +20,10 @@ const tech = ref([
     }
 ])
 onMounted(() => {
-    gsap.set(des.value, {
+    gsap.fromTo(servicesRef.value.children, {
         opacity: 0,
         y: 30
-    })
-
-    gsap.to(des.value, {
+    }, {
         opacity: 1,
         y: 0,
         duration: 0.8,
@@ -43,13 +39,15 @@ onMounted(() => {
     <section ref="parasec">
         <div class="w-full flex items-center justify-center flex-col mt-10">
             <div
-                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between transition-colors duration-500">
-                <router-link to="/Projectmore"
+                class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex items-center justify-between border-b border-white/10 light:border-black/10 transition-colors duration-500">
+                <router-link to="/hero"
                     class="flex items-center justify-center gap-1 text-[12px] font-normal font-mono text-white/70 light:text-black/70">BACK
                     TO HOME
                 </router-link>
+                <span class="text-[12px] font-mono text-white/40 light:text-black/40">04 / SERVICES</span>
             </div>
             <div
+                ref="servicesRef"
                 class="mx-auto max-w-5xl w-full py-3 2xl:px-3 px-1 flex flex-col items-center justify-between transition-colors duration-500">
                 <div
                     class="flex items-start justify-start gap-4 border-b light:border-black/10 border-white/10  p-4 w-full">
